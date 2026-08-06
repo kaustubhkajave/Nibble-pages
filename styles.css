@@ -1,0 +1,188 @@
+/*
+ * One stylesheet for all three pages. No build step, no external requests —
+ * these are meant to be copied into a static host (GitHub Pages) as-is.
+ *
+ * Colours mirror the app's warm palette so the site and the product match.
+ */
+:root {
+  color-scheme: light dark;
+  --background: #fbf6ef;
+  --surface: #fffaf4;
+  --border: #e2d5c7;
+  --label: #2b211b;
+  --secondary-label: #76675b;
+  --accent: #b74729;
+  --accent-contrast: #ffffff;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #16120f;
+    --surface: #201a16;
+    --border: #44382f;
+    --label: #f4ede3;
+    --secondary-label: #c1b4a8;
+    --accent: #ea8560;
+    --accent-contrast: #16120f;
+  }
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0 1.25rem 4rem;
+  background: var(--background);
+  color: var(--label);
+  font: 17px/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Helvetica, Arial, sans-serif;
+  -webkit-text-size-adjust: 100%;
+}
+
+.wrap {
+  max-width: 46rem;
+  margin: 0 auto;
+}
+
+header.site {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+  padding: 1.75rem 0 1.25rem;
+}
+
+.brand {
+  font-size: 1.35rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  text-decoration: none;
+  color: var(--label);
+}
+
+nav a {
+  color: var(--secondary-label);
+  text-decoration: none;
+  margin-left: 1.1rem;
+  font-size: 0.95rem;
+}
+
+nav a:hover,
+nav a:focus-visible {
+  color: var(--accent);
+  text-decoration: underline;
+}
+
+h1 {
+  font-size: clamp(1.9rem, 5vw, 2.6rem);
+  line-height: 1.15;
+  letter-spacing: -0.03em;
+  margin: 1.5rem 0 0.75rem;
+}
+
+h2 {
+  font-size: 1.25rem;
+  letter-spacing: -0.01em;
+  margin: 2.25rem 0 0.5rem;
+}
+
+h3 {
+  font-size: 1.02rem;
+  margin: 1.5rem 0 0.35rem;
+}
+
+p,
+li {
+  color: var(--label);
+}
+
+.lede {
+  font-size: 1.15rem;
+  color: var(--secondary-label);
+  max-width: 34rem;
+}
+
+.muted {
+  color: var(--secondary-label);
+  font-size: 0.92rem;
+}
+
+.card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 1.25rem 1.4rem;
+  margin: 1rem 0;
+}
+
+.cards {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+}
+
+.cta {
+  display: inline-block;
+  margin-top: 1.25rem;
+  padding: 0.8rem 1.4rem;
+  border-radius: 999px;
+  background: var(--accent);
+  color: var(--accent-contrast);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+a {
+  color: var(--accent);
+}
+
+/*
+ * Anything still needing the author's details is wrapped in this, so an
+ * unfilled placeholder is impossible to miss before publishing.
+ */
+.todo {
+  background: #ffe8b3;
+  color: #4a3200;
+  padding: 0.1rem 0.4rem;
+  border-radius: 5px;
+  font-weight: 700;
+}
+
+footer.site {
+  margin-top: 3rem;
+  padding-top: 1.25rem;
+  border-top: 1px solid var(--border);
+  color: var(--secondary-label);
+  font-size: 0.9rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem 1.25rem;
+  justify-content: space-between;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1rem 0;
+  font-size: 0.95rem;
+}
+
+th,
+td {
+  text-align: left;
+  padding: 0.6rem 0.5rem;
+  border-bottom: 1px solid var(--border);
+  vertical-align: top;
+}
+
+th {
+  color: var(--secondary-label);
+  font-weight: 600;
+}
+
+.table-scroll {
+  overflow-x: auto;
+}
