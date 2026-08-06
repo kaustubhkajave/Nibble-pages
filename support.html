@@ -3,127 +3,194 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="color-scheme" content="light dark" />
+    <meta name="theme-color" content="#fbf6ef" />
     <title>Support — Nibble</title>
     <meta
       name="description"
-      content="Help with Nibble: subscriptions, recipes, photos, and getting in touch."
+      content="Contact Nibble support and find help with subscriptions, recipes, ingredient photos, and data."
     />
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <div class="wrap">
-      <header class="site">
-        <a class="brand" href="index.html">Nibble</a>
-        <nav>
+    <a class="skip-link" href="#main-content">Skip to content</a>
+
+    <div class="site-shell">
+      <header class="site-header">
+        <a class="brand" href="index.html" aria-label="Nibble home">
+          <span class="brand-mark" aria-hidden="true">N</span>
+          <span>Nibble</span>
+        </a>
+        <nav aria-label="Primary navigation">
+          <a href="index.html">Home</a>
           <a href="privacy.html">Privacy</a>
-          <a href="support.html">Support</a>
+          <a href="support.html" aria-current="page">Support</a>
         </nav>
       </header>
 
-      <main>
-        <h1>Support</h1>
-        <p class="lede">
-          Email <span class="todo">[[SUPPORT EMAIL]]</span> and we'll get back to
-          you. If it's about a specific problem, the Support ID in the app's
-          Settings screen helps us find what happened.
-        </p>
+      <main id="main-content" class="prose-main">
+        <header class="page-header">
+          <h1>Support</h1>
+        </header>
 
-        <div class="card">
-          <h3>Before you write in</h3>
-          <p class="muted">
-            Open <strong>Settings</strong> in the app and copy your
-            <strong>Support ID</strong>. It's an anonymous identifier — it tells
-            us nothing about you, but it lets us look up whether a request
-            failed on our side.
-          </p>
-        </div>
+        <section class="contact-card" aria-labelledby="contact-support">
+          <div>
+            <h2 id="contact-support">Contact Nibble</h2>
+            <p>
+              Include the Support ID from Nibble's Settings screen when
+              reporting a request or subscription problem.
+            </p>
+          </div>
+          <a
+            class="button"
+            href="mailto:getnibble@outlook.com?subject=Nibble%20Support"
+          >
+            getnibble@outlook.com
+          </a>
+        </section>
 
-        <h2>Subscriptions</h2>
+        <section class="faq-section">
+          <h2>Subscriptions</h2>
 
-        <h3>How do I cancel?</h3>
-        <p>
-          Subscriptions are billed by Apple, so they're cancelled through Apple:
-          open the <strong>Settings</strong> app on your iPhone, tap your name,
-          then <strong>Subscriptions</strong>, choose Nibble, and tap
-          <strong>Cancel Subscription</strong>. You keep access until the end of
-          the period you've already paid for. There's also a
-          <strong>Manage Subscription</strong> button inside Nibble's Settings
-          screen that takes you straight there.
-        </p>
+          <details>
+            <summary>Cancel or manage a subscription</summary>
+            <div class="answer">
+              <p>
+                Open Nibble's Settings screen and select
+                <strong>Nibble Plus</strong>, then
+                <strong>Manage Subscription</strong>. You can also open the iOS
+                Settings app, tap your name, choose
+                <strong>Subscriptions</strong>, select Nibble, and follow the
+                cancellation options. Access continues until the end of the
+                paid period.
+              </p>
+            </div>
+          </details>
 
-        <h3>How do I get a refund?</h3>
-        <p>
-          Refunds are handled by Apple, not by us. Visit
-          <a href="https://reportaproblem.apple.com">reportaproblem.apple.com</a>
-          and sign in with your Apple ID to request one.
-        </p>
+          <details>
+            <summary>Request a refund</summary>
+            <div class="answer">
+              <p>
+                Apple handles App Store billing and refunds. Visit
+                <a href="https://reportaproblem.apple.com"
+                  >reportaproblem.apple.com</a
+                >
+                and sign in with the Apple ID used for the purchase.
+              </p>
+            </div>
+          </details>
 
-        <h3>I paid but Nibble Plus isn't active</h3>
-        <p>
-          Open Settings in the app and tap <strong>Restore Purchases</strong>.
-          That re-checks your Apple ID against our records. If it still doesn't
-          activate, email us with your Support ID.
-        </p>
+          <details>
+            <summary>Restore Nibble Plus</summary>
+            <div class="answer">
+              <p>
+                Open Nibble Plus from the app's Settings screen and tap
+                <strong>Restore Purchases</strong>. If Plus remains inactive,
+                email us with your Support ID.
+              </p>
+            </div>
+          </details>
 
-        <h3>What does a recipe credit mean?</h3>
-        <p>
-          One credit is one recipe. Asking for three meals uses three credits;
-          asking for one uses one. Creating a single named recipe uses one.
-          Ingredient detection, failed generations, retries, saving recipes, and
-          cooking never use credits.
-        </p>
+          <details>
+            <summary>Free recipe credits and Nibble Plus</summary>
+            <div class="answer">
+              <p>
+                The free version includes a limited number of recipe credits.
+                Each generated meal or named recipe uses one free credit;
+                ingredient photo scanning does not. Nibble Plus includes
+                unlimited recipe generation and photo scans while the
+                subscription is active, subject to service availability and
+                safeguards against misuse.
+              </p>
+            </div>
+          </details>
+        </section>
 
-        <h2>Using the app</h2>
+        <section class="faq-section">
+          <h2>Using Nibble</h2>
 
-        <h3>It couldn't make as many meals as I asked for</h3>
-        <p>
-          That's deliberate. Rather than padding out weak suggestions, Nibble
-          gives you the ones that genuinely work and tells you it fell short.
-          Adding a few more ingredients — especially staples like oil, salt, or
-          butter — usually fixes it.
-        </p>
+          <details>
+            <summary>The ingredient photo missed something</summary>
+            <div class="answer">
+              <p>
+                Add, rename, or remove ingredients on the review screen before
+                generating meals. Only the list you confirm is used.
+              </p>
+            </div>
+          </details>
 
-        <h3>It says my ingredients aren't enough</h3>
-        <p>
-          If "No grocery trip" is on, Nibble will only use what you've
-          confirmed. Turning it off, or confirming a couple of common staples on
-          the ingredients screen, gives it far more to work with.
-        </p>
+          <details>
+            <summary>Nibble created fewer meals than requested</summary>
+            <div class="answer">
+              <p>
+                Nibble returns the practical options it can support instead of
+                padding the list. Confirming more ingredients or allowing a
+                grocery trip can make more recipes possible.
+              </p>
+            </div>
+          </details>
 
-        <h3>The ingredient photo missed something</h3>
-        <p>
-          You can add, rename, or remove anything on the ingredient review
-          screen before generating. Only the confirmed list is used.
-        </p>
+          <details>
+            <summary>A recipe or photo request failed</summary>
+            <div class="answer">
+              <p>
+                Check your connection and try again. You can enter ingredients
+                manually if photo analysis remains unavailable. For repeated
+                failures, email the Support ID shown in Settings.
+              </p>
+            </div>
+          </details>
 
-        <h3>Where are my saved recipes stored?</h3>
-        <p>
-          On your device only. They aren't synced to a server or to other
-          devices, which also means deleting the app deletes them. See the
-          <a href="privacy.html">privacy policy</a> for the full picture.
-        </p>
+          <details>
+            <summary>Find or remove saved recipes</summary>
+            <div class="answer">
+              <p>
+                Saved recipes are in Nibble's Library and remain on that device.
+                Delete individual recipes from the Library. Deleting the app
+                removes all locally stored Nibble data and cannot be undone.
+              </p>
+            </div>
+          </details>
+        </section>
 
-        <h3>How do I delete my data?</h3>
-        <p>
-          Deleting the app removes everything stored locally, including the
-          anonymous install identifier. If you'd like server-side records
-          removed as well, email us.
-        </p>
+        <section class="faq-section">
+          <h2>Safety and privacy</h2>
 
-        <h2>Reporting a problem with a recipe</h2>
-        <p>
-          Nibble uses AI and can get things wrong. Always check ingredients,
-          labels, allergens, and cooking temperatures yourself. If a recipe was
-          unsafe or badly wrong, please tell us what it suggested so we can
-          improve the guardrails.
-        </p>
+          <details>
+            <summary>Report an unsafe or incorrect recipe</summary>
+            <div class="answer">
+              <p>
+                Email us with the recipe title and the unsafe or incorrect
+                instruction. Nibble uses AI and can make mistakes, so always
+                verify ingredients, allergen labels, doneness, and safe cooking
+                temperatures yourself.
+              </p>
+            </div>
+          </details>
+
+          <details>
+            <summary>Request deletion of server-side records</summary>
+            <div class="answer">
+              <p>
+                Email
+                <a href="mailto:getnibble@outlook.com?subject=Nibble%20privacy%20request"
+                  >getnibble@outlook.com</a
+                >
+                and include your Support ID when available. See the
+                <a href="privacy.html">privacy policy</a> for what Nibble stores
+                locally and what is processed by the service.
+              </p>
+            </div>
+          </details>
+        </section>
       </main>
 
-      <footer class="site">
-        <span>© <span class="todo">[[YEAR]]</span> <span class="todo">[[YOUR NAME OR COMPANY]]</span></span>
-        <span>
-          <a href="index.html">Home</a> ·
+      <footer class="site-footer">
+        <span>© 2026 Nibble</span>
+        <span class="footer-links">
+          <a href="index.html">Home</a>
           <a href="privacy.html">Privacy</a>
+          <a href="mailto:getnibble@outlook.com">Email</a>
         </span>
       </footer>
     </div>

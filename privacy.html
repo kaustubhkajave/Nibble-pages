@@ -3,178 +3,253 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="color-scheme" content="light dark" />
+    <meta name="theme-color" content="#fbf6ef" />
     <title>Privacy Policy — Nibble</title>
     <meta
       name="description"
-      content="What Nibble collects, what it does not, and who processes it."
+      content="How Nibble handles ingredient photos, recipe requests, subscriptions, support messages, and locally stored data."
     />
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <div class="wrap">
-      <header class="site">
-        <a class="brand" href="index.html">Nibble</a>
-        <nav>
-          <a href="privacy.html">Privacy</a>
+    <a class="skip-link" href="#main-content">Skip to content</a>
+
+    <div class="site-shell">
+      <header class="site-header">
+        <a class="brand" href="index.html" aria-label="Nibble home">
+          <span class="brand-mark" aria-hidden="true">N</span>
+          <span>Nibble</span>
+        </a>
+        <nav aria-label="Primary navigation">
+          <a href="index.html">Home</a>
+          <a href="privacy.html" aria-current="page">Privacy</a>
           <a href="support.html">Support</a>
         </nav>
       </header>
 
-      <main>
-        <h1>Privacy Policy</h1>
-        <p class="muted">
-          Last updated <span class="todo">[[EFFECTIVE DATE]]</span>. This policy
-          covers the Nibble iOS app and the API it talks to.
-        </p>
+      <main id="main-content" class="prose-main">
+        <header class="page-header">
+          <h1>Privacy Policy</h1>
+          <p class="updated">Last updated August 6, 2026</p>
+        </header>
 
-        <div class="card">
+        <div class="summary-card">
+          <strong>The short version</strong>
           <p>
-            <strong>The short version.</strong> Nibble has no accounts. Your
-            saved recipes, folders, and preferences live on your device, not on
-            a server. Photos and ingredient lists are sent to be processed into
-            recipes and are not kept afterwards. We do not sell your data or use
-            it for advertising.
+            Nibble has no user accounts. Saved recipes and preferences stay on
+            your device. When you use an AI feature, the content needed for that
+            request is sent to Nibble's API and the relevant service provider.
+            We do not sell personal information or use advertising trackers.
           </p>
         </div>
 
-        <h2>What stays on your device</h2>
-        <p>
-          Saved recipes, recipe folders, favourites, recently cooked meals, your
-          dinner preferences, and onboarding state are stored in local app
-          storage. They are not uploaded, backed up to us, or readable by us. If
-          you delete the app, they are gone.
-        </p>
+        <section>
+          <h2>What stays on your device</h2>
+          <p>
+            Saved recipes, folders, recent cooking history, preferences,
+            onboarding status, and an anonymous installation identifier are
+            stored locally. Nibble does not provide in-app cloud syncing.
+            Deleting the app removes this data from that device; any device
+            backups are controlled by Apple and your iOS settings.
+          </p>
+          <p>
+            A selected ingredient photo remains temporary app data and is not
+            restored after an app restart.
+          </p>
+        </section>
 
-        <h2>What is sent when you generate a recipe</h2>
-        <div class="table-scroll">
-          <table>
-            <thead>
-              <tr>
-                <th>What</th>
-                <th>When</th>
-                <th>Why</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>An ingredient photo</td>
-                <td>When you take or choose one</td>
-                <td>
-                  To identify ingredients. Processed and discarded — the image
-                  is not stored by us.
-                </td>
-              </tr>
-              <tr>
-                <td>Confirmed ingredient names and your preferences</td>
-                <td>When you ask for meals</td>
-                <td>
-                  To generate recipes that match your time, effort, and dietary
-                  constraints.
-                </td>
-              </tr>
-              <tr>
-                <td>A dish name</td>
-                <td>When you use Create Recipe</td>
-                <td>To generate that specific recipe.</td>
-              </tr>
-              <tr>
-                <td>An anonymous install identifier</td>
-                <td>Every request</td>
-                <td>
-                  A random ID created on your device. It is hashed before use so
-                  requests can be rate-limited fairly. It is not linked to your
-                  name, email, Apple ID, or device identifiers.
-                </td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
+        <section>
+          <h2>What is processed when you use Nibble</h2>
+          <div class="table-scroll" tabindex="0" role="region" aria-label="Data processing details">
+            <table>
+              <thead>
+                <tr>
+                  <th scope="col">Information</th>
+                  <th scope="col">Purpose</th>
+                  <th scope="col">Handling</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Ingredient photo</td>
+                  <td>Identify food and pantry items in the selected image.</td>
+                  <td>
+                    Sent to Nibble's API and Google Gemini. Nibble does not save
+                    the image to its database.
+                  </td>
+                </tr>
+                <tr>
+                  <td>Confirmed ingredients, preferences, and dish names</td>
+                  <td>Create the recipes you request.</td>
+                  <td>
+                    Sent to Nibble's API and an AI provider, currently OpenAI.
+                    Nibble does not save this content to its database.
+                  </td>
+                </tr>
+                <tr>
+                  <td>Anonymous installation identifier</td>
+                  <td>
+                    Apply free usage, verify subscriptions, limit abuse, and
+                    locate requests when you provide a Support ID.
+                  </td>
+                  <td>
+                    Sent to Nibble's API and RevenueCat. Nibble stores a keyed
+                    hash rather than the original identifier in server records.
+                  </td>
+                </tr>
+                <tr>
+                  <td>Connection and request metadata</td>
+                  <td>Secure, operate, and troubleshoot the service.</td>
+                  <td>
+                    Includes items such as app version, platform, endpoint,
+                    request ID, status, timing, model usage, and a hashed IP
+                    address. Recipe content is excluded from Nibble's logs.
+                  </td>
+                </tr>
+                <tr>
+                  <td>Subscription information</td>
+                  <td>Confirm whether Nibble Plus is active.</td>
+                  <td>
+                    Apple handles payment details. RevenueCat provides product,
+                    entitlement, and renewal status to Nibble.
+                  </td>
+                </tr>
+                <tr>
+                  <td>Support communications</td>
+                  <td>Respond when you contact us.</td>
+                  <td>
+                    Your email address, message, and any Support ID you choose to
+                    include are retained in our support mailbox as needed to
+                    resolve the request.
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
 
-        <h2>What our logs contain</h2>
-        <p>
-          Our server keeps operational logs — which endpoint was called, whether
-          it succeeded, how long it took, and roughly what it cost. These logs
-          are deliberately built <em>not</em> to contain your content: dish
-          names, ingredient names, and dietary text are excluded, and we have
-          automated tests that fail the build if they ever appear.
-        </p>
+        <section>
+          <h2>AI processing and retention</h2>
+          <p>
+            Nibble's API keeps request content in memory only long enough to
+            complete the request. It does not place ingredient photos,
+            ingredient names, dietary text, dish names, or generated recipes in
+            its operational logs or database.
+          </p>
+          <p>
+            AI providers may temporarily retain inputs and outputs for security,
+            abuse monitoring, and legal compliance under their own terms.
+            OpenAI states that API content may be retained for up to 30 days for
+            abuse monitoring unless different controls apply. Google's paid
+            Gemini services may log prompts and responses for a limited period
+            for abuse monitoring. Nibble does not opt in to use request content
+            to train provider models.
+          </p>
+        </section>
 
-        <h2>Who else processes it</h2>
-        <ul>
-          <li>
-            <strong>Google (Gemini)</strong> — ingredient recognition from your
-            photo.
-          </li>
-          <li>
-            <strong>OpenAI</strong> — recipe generation from your confirmed
-            ingredients and preferences.
-          </li>
-          <li>
-            <strong>Google Cloud</strong> — hosting for our API.
-          </li>
-          <li>
-            <strong>RevenueCat</strong> — subscription status, if you subscribe.
-            It receives the same anonymous install identifier.
-          </li>
-          <li>
-            <strong>Apple</strong> — handles all payments. We never see your
-            payment details.
-          </li>
-        </ul>
-        <p class="muted">
-          These providers process data on our behalf to deliver the feature you
-          asked for. We do not send them anything that identifies you personally,
-          because we do not have anything that identifies you personally.
-        </p>
+        <section>
+          <h2>Service providers</h2>
+          <ul class="provider-list">
+            <li>
+              <strong>Google Gemini</strong> processes ingredient photos.
+            </li>
+            <li>
+              <strong>OpenAI</strong> processes confirmed ingredients,
+              preferences, and dish names for recipe generation.
+            </li>
+            <li>
+              <strong>Google Cloud</strong> hosts Nibble's API and server-side
+              operational records.
+            </li>
+            <li>
+              <strong>RevenueCat</strong> manages subscription entitlement
+              status using the anonymous installation identifier.
+            </li>
+            <li>
+              <strong>Apple</strong> processes App Store payments and purchase
+              history. Nibble does not receive your payment card details.
+            </li>
+          </ul>
+          <p>
+            These providers process information only to supply, secure, or
+            support the requested service and operate under their own privacy
+            and data-protection terms. They may process information in countries
+            other than your own.
+          </p>
+        </section>
 
-        <h2>What we do not do</h2>
-        <ul>
-          <li>No accounts, passwords, names, or email addresses.</li>
-          <li>No advertising, ad networks, or tracking across other apps.</li>
-          <li>No selling or sharing of data with data brokers.</li>
-          <li>No location, contacts, or health data.</li>
-        </ul>
+        <section>
+          <h2>Retention and deletion</h2>
+          <p>
+            Operational logs and hashed server records are retained only while
+            reasonably needed to operate the service, enforce usage and
+            subscriptions, prevent abuse, resolve support issues, and meet legal
+            obligations. Support emails are retained as needed to handle the
+            conversation and related records.
+          </p>
+          <p>
+            Delete the app to erase Nibble's local data from your device. You
+            can also remove camera or photo-library access in iOS Settings and
+            continue by entering ingredients manually. To request deletion of
+            server-side records or support communications, email
+            <a href="mailto:getnibble@outlook.com?subject=Nibble%20privacy%20request"
+              >getnibble@outlook.com</a
+            >
+            and include your Support ID when available.
+          </p>
+        </section>
 
-        <h2>Photos permission</h2>
-        <p>
-          Nibble asks for camera or photo library access only when you choose to
-          add a photo. It reads the single image you select. It does not browse
-          or index your library.
-        </p>
+        <section>
+          <h2>Your choices and rights</h2>
+          <p>
+            Depending on where you live, you may have rights to access, correct,
+            delete, restrict, or object to certain processing. Contact us to make
+            a request. We may need enough information to verify and locate the
+            relevant records without creating an account for you.
+          </p>
+        </section>
 
-        <h2>Children</h2>
-        <p>
-          Nibble is not directed at children under 13 and we do not knowingly
-          collect information from them.
-        </p>
+        <section>
+          <h2>Website privacy</h2>
+          <p>
+            These Nibble information pages do not use analytics, advertising
+            pixels, cookies, or contact forms. If you email us, your email
+            provider and Outlook process that communication.
+          </p>
+        </section>
 
-        <h2>Your choices and rights</h2>
-        <p>
-          Because there is no account, the fastest way to erase everything
-          associated with your device is to delete the app — that removes all
-          locally stored recipes and preferences along with the anonymous
-          install identifier. If you would like us to delete server-side rate
-          limiting or subscription records, or if you have a question about your
-          data under GDPR, UK GDPR, or CCPA, contact us and we will help.
-        </p>
+        <section>
+          <h2>Children</h2>
+          <p>
+            Nibble is not directed to children under 13, and we do not knowingly
+            collect personal information from children.
+          </p>
+        </section>
 
-        <h2>Changes</h2>
-        <p>
-          If this policy changes materially, the date at the top will change and
-          the updated version will be posted here.
-        </p>
+        <section>
+          <h2>Changes to this policy</h2>
+          <p>
+            We may update this policy when Nibble's features, providers, or legal
+            obligations change. The date at the top will identify the latest
+            version.
+          </p>
+        </section>
 
-        <h2>Contact</h2>
-        <p>
-          <span class="todo">[[SUPPORT EMAIL]]</span>
-        </p>
+        <section>
+          <h2>Contact</h2>
+          <address>
+            <a href="mailto:getnibble@outlook.com">getnibble@outlook.com</a>
+          </address>
+        </section>
       </main>
 
-      <footer class="site">
-        <span>© <span class="todo">[[YEAR]]</span> <span class="todo">[[YOUR NAME OR COMPANY]]</span></span>
-        <span>
-          <a href="index.html">Home</a> ·
+      <footer class="site-footer">
+        <span>© 2026 Nibble</span>
+        <span class="footer-links">
+          <a href="index.html">Home</a>
           <a href="support.html">Support</a>
+          <a href="mailto:getnibble@outlook.com">Email</a>
         </span>
       </footer>
     </div>

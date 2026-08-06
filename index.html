@@ -3,91 +3,126 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Nibble — Recipes from what you already have</title>
+    <meta name="color-scheme" content="light dark" />
+    <meta name="theme-color" content="#fbf6ef" />
+    <title>Nibble — Cook with what you have</title>
     <meta
       name="description"
-      content="Nibble turns a photo of your ingredients into practical recipes you can actually cook tonight."
+      content="Nibble turns the ingredients you already have into practical recipes with clear steps and timers."
     />
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <div class="wrap">
-      <header class="site">
-        <a class="brand" href="index.html">Nibble</a>
-        <nav>
+    <a class="skip-link" href="#main-content">Skip to content</a>
+
+    <div class="site-shell">
+      <header class="site-header">
+        <a class="brand" href="index.html" aria-label="Nibble home">
+          <span class="brand-mark" aria-hidden="true">N</span>
+          <span>Nibble</span>
+        </a>
+        <nav aria-label="Primary navigation">
+          <a href="index.html" aria-current="page">Home</a>
           <a href="privacy.html">Privacy</a>
           <a href="support.html">Support</a>
         </nav>
       </header>
 
-      <main>
-        <h1>Recipes from what you already have.</h1>
-        <p class="lede">
-          Photograph your ingredients. Nibble reads what's there and suggests
-          practical meals you can cook tonight — with steps, timers, and an
-          honest list of anything you're missing.
-        </p>
+      <main id="main-content" class="home-main">
+        <section class="hero">
+          <div class="hero-copy">
+            <h1>Turn what you have into dinner.</h1>
+            <p class="lede">
+              Add ingredients by photo or text, confirm what Nibble found, and
+              get practical recipes built around your preferences.
+            </p>
+            <span class="availability">Built for iPhone</span>
+          </div>
 
-        <a class="cta" href="#">
-          <span class="todo">[[APP STORE LINK]]</span>
-        </a>
+          <div class="hero-panel" aria-label="How Nibble works">
+            <ol class="process-list">
+              <li>
+                <span class="step-number">1</span>
+                <strong>Add ingredients by photo or text</strong>
+              </li>
+              <li>
+                <span class="step-number">2</span>
+                <strong>Confirm the list and your preferences</strong>
+              </li>
+              <li>
+                <span class="step-number">3</span>
+                <strong>Cook with clear steps and timers</strong>
+              </li>
+            </ol>
+          </div>
+        </section>
 
-        <h2>How it works</h2>
-        <div class="cards">
-          <div class="card">
-            <h3>1. Show what you have</h3>
+        <section aria-labelledby="why-nibble">
+          <h2 id="why-nibble">Made for real kitchens</h2>
+          <div class="feature-grid">
+            <article class="feature-card">
+              <span class="feature-icon" aria-hidden="true">✓</span>
+              <h3>You approve every ingredient</h3>
+              <p>
+                Correct anything the photo missed before a recipe is created.
+              </p>
+            </article>
+            <article class="feature-card">
+              <span class="feature-icon" aria-hidden="true">⌁</span>
+              <h3>Suggestions that fit tonight</h3>
+              <p>
+                Choose servings, time, effort, cleanup, and dietary needs.
+              </p>
+            </article>
+            <article class="feature-card">
+              <span class="feature-icon" aria-hidden="true">◷</span>
+              <h3>Cooking mode that stays useful</h3>
+              <p>
+                Follow focused steps, run timers, or open the full overview.
+              </p>
+            </article>
+          </div>
+        </section>
+
+        <section class="split-grid" aria-label="Nibble principles">
+          <article class="content-card">
+            <h2>Honest suggestions</h2>
             <p>
-              Take a photo, pick one from your library, or type ingredients in
-              by hand. You confirm the list before anything is generated.
+              If your ingredients only support one worthwhile meal, Nibble
+              gives you one good option instead of padding the results.
+            </p>
+          </article>
+          <article class="content-card">
+            <h2>Private by design</h2>
+            <p>
+              There is no account to create. Saved recipes and preferences stay
+              on your device. Read the
+              <a href="privacy.html">privacy policy</a> for full details.
+            </p>
+          </article>
+        </section>
+
+        <section class="plus-card" aria-labelledby="nibble-plus">
+          <div>
+            <h2 id="nibble-plus">Nibble Plus</h2>
+            <p>
+              Unlock unlimited recipe generation and ingredient photo scans
+              with a weekly or monthly auto-renewing subscription. Prices and
+              renewal terms appear in the app before purchase.
             </p>
           </div>
-          <div class="card">
-            <h3>2. Set the rules</h3>
-            <p>
-              Time you have, effort, cleanup, dietary needs, and how many meals
-              you want. Nibble only suggests things that fit.
-            </p>
-          </div>
-          <div class="card">
-            <h3>3. Cook it</h3>
-            <p>
-              Step-by-step cooking mode with timers, an overview whenever you
-              want the whole picture, and a library to save what worked.
-            </p>
-          </div>
-        </div>
-
-        <h2>Built to be honest</h2>
-        <div class="card">
-          <p>
-            Nibble tells you when it can't do something. If your ingredients
-            only stretch to one good meal, you get one good meal and a clear
-            explanation — not three padded ones.
-          </p>
-          <p>
-            Recipes and preferences are stored <strong>on your device</strong>.
-            There is no account to create and nothing to sign in to. See the
-            <a href="privacy.html">privacy policy</a> for exactly what is sent
-            where.
-          </p>
-        </div>
-
-        <h2>Nibble Plus</h2>
-        <div class="card">
-          <p>
-            Everyone gets a few recipes free. Nibble Plus adds a larger monthly
-            or weekly allowance of AI-generated recipes. Prices are shown in
-            your local currency in the app before you subscribe, and you can
-            cancel any time in App Store settings.
-          </p>
-        </div>
+          <a class="button button-secondary" href="support.html">
+            Subscription help
+          </a>
+        </section>
       </main>
 
-      <footer class="site">
-        <span>© <span class="todo">[[YEAR]]</span> <span class="todo">[[YOUR NAME OR COMPANY]]</span></span>
-        <span>
-          <a href="privacy.html">Privacy</a> ·
+      <footer class="site-footer">
+        <span>© 2026 Nibble</span>
+        <span class="footer-links">
+          <a href="privacy.html">Privacy</a>
           <a href="support.html">Support</a>
+          <a href="mailto:getnibble@outlook.com">Email</a>
         </span>
       </footer>
     </div>
