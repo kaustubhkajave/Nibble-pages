@@ -31,7 +31,7 @@
       <main id="main-content" class="prose-main">
         <header class="page-header">
           <h1>Privacy Policy</h1>
-          <p class="updated">Last updated August 6, 2026</p>
+          <p class="updated">Last updated August 21, 2026</p>
         </header>
 
         <div class="summary-card">
@@ -47,7 +47,7 @@
         <section>
           <h2>What stays on your device</h2>
           <p>
-            Saved recipes, folders, recent cooking history, preferences,
+            Saved recipes, their optional public source links, folders, recent cooking history, preferences,
             onboarding status, and an anonymous installation identifier are
             stored locally. Nibble does not provide in-app cloud syncing.
             Deleting the app removes this data from that device; any device
@@ -85,6 +85,16 @@
                   <td>
                     Sent to Nibble's API and an AI provider, currently OpenAI.
                     Nibble does not save this content to its database.
+                  </td>
+                </tr>
+                <tr>
+                  <td>Recipe text and recipe website links</td>
+                  <td>Import a recipe from written ingredients and directions.</td>
+                  <td>
+                    Processed transiently by Nibble's API and the relevant
+                    provider. Original recipe text and webpage contents are not saved. If you save the
+                    recipe, its structured content and optional public source
+                    link stay on your device.
                   </td>
                 </tr>
                 <tr>
@@ -134,7 +144,7 @@
           <p>
             Nibble's API keeps request content in memory only long enough to
             complete the request. It does not place ingredient photos,
-            ingredient names, dietary text, dish names, or generated recipes in
+            ingredient names, dietary text, dish names, recipe text, recipe webpage contents, or generated recipes in
             its operational logs or database.
           </p>
           <p>
@@ -156,7 +166,12 @@
             </li>
             <li>
               <strong>OpenAI</strong> processes confirmed ingredients,
-              preferences, and dish names for recipe generation.
+              preferences, dish names, and pasted recipe text for recipe generation.
+            </li>
+            <li>
+              <strong>Recipe websites</strong> receive a standard request from
+              Nibble's server when you import one of their public pages. They
+              may process that request under their own privacy policies.
             </li>
             <li>
               <strong>Google Cloud</strong> hosts Nibble's API and server-side
