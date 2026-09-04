@@ -493,6 +493,12 @@ p {
   text-transform: uppercase;
 }
 
+.recipe-title-link {
+  color: inherit;
+  text-decoration-color: var(--border-strong);
+  transition: color 140ms ease, text-decoration-color 140ms ease;
+}
+
 .recipe-preview .recipe-label {
   color: var(--accent);
 }
@@ -1184,6 +1190,12 @@ p {
   top: 1.5rem;
 }
 
+.recipe-ingredients,
+.recipe-method,
+.recipe-step {
+  scroll-margin-top: 2rem;
+}
+
 .recipe-section-heading {
   margin-bottom: 1.25rem;
   padding-bottom: 1rem;
@@ -1698,6 +1710,7 @@ details[open] summary::after {
   }
 
   .recipe-card-link:hover .recipe-card-action,
+  .recipe-title-link:hover,
   .recipe-text-link:hover,
   .recipe-jump-links a:hover,
   .recipe-breadcrumbs a:hover {
