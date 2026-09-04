@@ -1,0 +1,10 @@
+*
+!assets/
+!assets/**
+!recipes/
+!recipes/**
+!*.html
+!styles.css
+!motion.js
+!robots.txt
+!sitemap.xml
