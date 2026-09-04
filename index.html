@@ -3,128 +3,310 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="color-scheme" content="light dark" />
-    <meta name="theme-color" content="#fbf6ef" />
-    <title>Nibble — Cook with what you have</title>
+    <meta name="color-scheme" content="light" />
+    <meta name="theme-color" content="#fdfdfc" />
+    <meta name="robots" content="index,follow,max-image-preview:large" />
+    <title>Nibble — Turn what you have into dinner</title>
     <meta
       name="description"
-      content="Nibble turns the ingredients you already have into practical recipes with clear steps and timers."
+      content="Explore easy dinner recipes, or turn the ingredients you already have into a meal with Nibble for iPhone. Clear ingredients, steps, and cooking times."
     />
+    <link rel="canonical" href="https://cookwithnibble.com/" />
+    <meta property="og:url" content="https://cookwithnibble.com/" />
+    <meta property="og:site_name" content="Nibble" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Nibble — Turn what you have into dinner" />
+    <meta
+      property="og:description"
+      content="Practical recipes from what is already in your kitchen."
+    />
+    <meta property="og:image" content="https://cookwithnibble.com/assets/og.jpg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="628" />
+    <meta property="og:image:alt" content="Nibble — Turn what you have into dinner." />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Nibble — Turn what you have into dinner" />
+    <meta
+      name="twitter:description"
+      content="Practical recipes from what is already in your kitchen."
+    />
+    <meta name="twitter:image" content="https://cookwithnibble.com/assets/og.jpg" />
+    <meta name="twitter:image:alt" content="Nibble — Turn what you have into dinner." />
+    <link rel="icon" href="assets/icon.png" type="image/png" />
     <link rel="stylesheet" href="styles.css" />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "WebSite",
+            "@id": "https://cookwithnibble.com/#website",
+            "url": "https://cookwithnibble.com/",
+            "name": "Nibble",
+            "inLanguage": "en",
+            "publisher": { "@id": "https://cookwithnibble.com/#organization" }
+          },
+          {
+            "@type": "Organization",
+            "@id": "https://cookwithnibble.com/#organization",
+            "name": "Nibble",
+            "url": "https://cookwithnibble.com/",
+            "logo": "https://cookwithnibble.com/assets/icon.png",
+            "sameAs": [
+              "https://apps.apple.com/ph/app/nibble-fridge-to-dinner/id6797456027"
+            ]
+          }
+        ]
+      }
+    </script>
   </head>
-  <body>
+  <body class="page-home">
     <a class="skip-link" href="#main-content">Skip to content</a>
 
     <div class="site-shell">
       <header class="site-header">
-        <a class="brand" href="index.html" aria-label="Nibble home">
-          <span class="brand-mark" aria-hidden="true">N</span>
+        <a class="brand" href="./" aria-label="Nibble home">
+          <img class="brand-mark" src="assets/icon.png" alt="" width="40" height="40" />
           <span>Nibble</span>
         </a>
         <nav aria-label="Primary navigation">
-          <a href="index.html" aria-current="page">Home</a>
-          <a href="privacy.html">Privacy</a>
+          <a href="./" aria-current="page">Home</a>
+          <a href="recipes/">Recipes</a>
+          <a class="nav-privacy" href="privacy.html">Privacy</a>
           <a href="support.html">Support</a>
         </nav>
       </header>
 
-      <main id="main-content" class="home-main">
-        <section class="hero">
+      <main id="main-content">
+        <section class="hero" aria-labelledby="hero-title">
           <div class="hero-copy">
-            <h1>Turn what you have into dinner.</h1>
+            <p class="eyebrow">Dinner, rescued</p>
+            <h1 id="hero-title">Cook what you have. <em>Love what you make.</em></h1>
             <p class="lede">
-              Add ingredients by photo or text, confirm what Nibble found, and
-              get practical recipes built around your preferences.
+              Nibble turns what is already in your kitchen into practical meals—and keeps
+              you in control from the first photo to the final timer.
             </p>
-            <span class="availability">Built for iPhone</span>
+            <div class="hero-actions">
+              <a class="button" href="#how-it-works">
+                See how Nibble works
+                <span aria-hidden="true">↓</span>
+              </a>
+              <a
+                class="platform-pill"
+                href="https://apps.apple.com/ph/app/nibble-fridge-to-dinner/id6797456027"
+                aria-label="Get Nibble on the App Store"
+              >Made for iPhone</a>
+            </div>
+            <ul class="trust-list" aria-label="Nibble highlights">
+              <li>No account</li>
+              <li>You approve every ingredient</li>
+              <li>Recipes stay on-device</li>
+            </ul>
           </div>
 
-          <div class="hero-panel" aria-label="How Nibble works">
-            <ol class="process-list">
-              <li>
-                <span class="step-number">1</span>
-                <strong>Add ingredients by photo or text</strong>
-              </li>
-              <li>
-                <span class="step-number">2</span>
-                <strong>Confirm the list and your preferences</strong>
-              </li>
-              <li>
-                <span class="step-number">3</span>
-                <strong>Cook with clear steps and timers</strong>
-              </li>
-            </ol>
+          <div class="hero-stage" aria-label="Nibble scanning ingredients for a Tuscan soup recipe">
+            <figure class="ingredient-photo">
+              <img
+                src="assets/tuscan-ingredients.webp"
+                alt="Ground turkey, white beans, tomatoes, kale, stock, and onion on a wooden counter"
+                width="1080"
+                height="1440"
+                fetchpriority="high"
+              />
+              <div class="scan-overlay" aria-hidden="true">
+                <span class="scan-runner"></span>
+                <span class="scan-corner scan-corner-top-left"></span>
+                <span class="scan-corner scan-corner-top-right"></span>
+                <span class="scan-corner scan-corner-bottom-left"></span>
+                <span class="scan-corner scan-corner-bottom-right"></span>
+              </div>
+              <figcaption class="scan-result">
+                <span>Scanning ingredients</span>
+                <strong>Turkey · beans · kale</strong>
+              </figcaption>
+            </figure>
+            <div class="recipe-preview">
+              <span class="recipe-label">Tonight's match</span>
+              <strong>30-Minute Tuscan Ground Turkey and White Bean Soup</strong>
+              <span>30 minutes · One pot</span>
+            </div>
           </div>
         </section>
 
-        <section aria-labelledby="why-nibble">
-          <h2 id="why-nibble">Made for real kitchens</h2>
-          <div class="feature-grid">
-            <article class="feature-card">
-              <span class="feature-icon" aria-hidden="true">✓</span>
-              <h3>You approve every ingredient</h3>
-              <p>
-                Correct anything the photo missed before a recipe is created.
-              </p>
+        <ul class="proof-strip" aria-label="Ways Nibble helps">
+          <li><strong>3 ways in</strong><span>Photo, text, or dish name</span></li>
+          <li><strong>1 clear plan</strong><span>Worth cooking tonight</span></li>
+          <li><strong>0 account setup</strong><span>Open Nibble and start</span></li>
+        </ul>
+
+        <section id="how-it-works" class="section journey-section" aria-labelledby="journey-title">
+          <header class="section-heading">
+            <p class="eyebrow">How it works</p>
+            <h2 id="journey-title">From “what can I make?” to dinner.</h2>
+          </header>
+
+          <div class="journey-grid">
+            <article class="journey-step">
+              <span class="step-number">01</span>
+              <div class="step-art step-art-photo">
+                <img
+                  src="assets/tuscan-ingredients.webp"
+                  alt="Ground turkey, white beans, tomatoes, kale, stock, and onion ready to scan"
+                  width="1080"
+                  height="1440"
+                  loading="lazy"
+                />
+              </div>
+              <h3>Scan what you have</h3>
+              <p>Point Nibble at your ingredients, type them, or name the dish you want.</p>
             </article>
-            <article class="feature-card">
-              <span class="feature-icon" aria-hidden="true">⌁</span>
-              <h3>Suggestions that fit tonight</h3>
-              <p>
-                Choose servings, time, effort, cleanup, and dietary needs.
-              </p>
+
+            <article class="journey-step">
+              <span class="step-number">02</span>
+              <div class="step-art step-art-review">
+                <img
+                  src="assets/tuscan-turkey-browning.webp"
+                  alt="Ground turkey and onion browning in a pan"
+                  width="1080"
+                  height="1440"
+                  loading="lazy"
+                />
+              </div>
+              <h3>Turn the scan into a plan</h3>
+              <p>Confirm the ingredients, then set 30 minutes, one pot, and your servings.</p>
             </article>
-            <article class="feature-card">
-              <span class="feature-icon" aria-hidden="true">◷</span>
-              <h3>Cooking mode that stays useful</h3>
-              <p>
-                Follow focused steps, run timers, or open the full overview.
-              </p>
+
+            <article class="journey-step">
+              <span class="step-number">03</span>
+              <div class="step-art step-art-cook">
+                <img
+                  src="assets/tuscan-soup-finished.webp"
+                  alt="Finished Tuscan ground turkey and white bean soup with kale"
+                  width="1080"
+                  height="1440"
+                  loading="lazy"
+                />
+              </div>
+              <h3>Cook without the clutter</h3>
+              <p>Brown the turkey, simmer the beans and tomatoes, then finish with kale.</p>
             </article>
           </div>
         </section>
 
-        <section class="split-grid" aria-label="Nibble principles">
-          <article class="content-card">
-            <h2>Honest suggestions</h2>
+        <section class="section control-section" aria-labelledby="control-title">
+          <div class="control-copy">
+            <p class="eyebrow">Built for real kitchens</p>
+            <h2 id="control-title">One good answer beats ten weak ones.</h2>
             <p>
-              If your ingredients only support one worthwhile meal, Nibble
-              gives you one good option instead of padding the results.
+              Nibble works with tonight's reality. If your ingredients support one worthwhile
+              dinner, that is what you get.
             </p>
-          </article>
-          <article class="content-card">
-            <h2>Private by design</h2>
-            <p>
-              There is no account to create. Saved recipes and preferences stay
-              on your device. Read the
-              <a href="privacy.html">privacy policy</a> for full details.
-            </p>
-          </article>
+            <ul class="check-list">
+              <li>Adjust time, effort, cleanup, and servings</li>
+              <li>See what you have and what you still need</li>
+              <li>Import a public recipe without losing its source</li>
+            </ul>
+          </div>
+
+          <div class="suggestion-board" aria-label="Tuscan ground turkey and white bean soup suggestion">
+            <div class="board-header">
+              <span>Tonight from your kitchen</span>
+              <span class="board-count">1 strong match</span>
+            </div>
+            <article class="meal-card">
+              <div class="meal-art">
+                <img
+                  src="assets/tuscan-soup-finished.webp"
+                  alt="Bowl of Tuscan ground turkey and white bean soup"
+                  width="1080"
+                  height="1440"
+                  loading="lazy"
+                />
+              </div>
+              <div>
+                <span class="recipe-label">Ready in 30 minutes</span>
+                <h3>30-Minute Tuscan Ground Turkey and White Bean Soup</h3>
+                <div class="meal-meta">
+                  <span>Easy</span><span>One pot</span><span>4 servings</span>
+                </div>
+              </div>
+            </article>
+            <div class="ingredient-groups">
+              <div>
+                <span class="group-label">You have</span>
+                <span class="ingredient-chip ingredient-chip-have">Ground turkey</span>
+                <span class="ingredient-chip ingredient-chip-have">White beans</span>
+                <span class="ingredient-chip ingredient-chip-have">Kale</span>
+              </div>
+              <div>
+                <span class="group-label">Optional</span>
+                <span class="ingredient-chip">Parmesan</span>
+              </div>
+            </div>
+          </div>
         </section>
 
-        <section class="plus-card" aria-labelledby="nibble-plus">
-          <div>
-            <h2 id="nibble-plus">Nibble Plus</h2>
-            <p>
-              Unlock unlimited recipe generation and ingredient photo scans
-              with a weekly or monthly auto-renewing subscription. Prices and
-              renewal terms appear in the app before purchase.
-            </p>
+        <section class="section principles" aria-labelledby="principles-title">
+          <header class="section-heading section-heading-compact">
+            <p class="eyebrow">The quiet details</p>
+            <h2 id="principles-title">Useful all the way through.</h2>
+          </header>
+          <div class="principle-grid">
+            <article>
+              <span class="principle-index">01</span>
+              <h3>Honest suggestions</h3>
+              <p>No filler recipes just to hit a number.</p>
+            </article>
+            <article>
+              <span class="principle-index">02</span>
+              <h3>Focused cooking</h3>
+              <p>One step at a time, with timers where they matter.</p>
+            </article>
+            <article>
+              <span class="principle-index">03</span>
+              <h3>Private by design</h3>
+              <p>No account. Saved recipes and preferences stay on your device.</p>
+            </article>
           </div>
-          <a class="button button-secondary" href="support.html">
-            Subscription help
-          </a>
+        </section>
+
+        <section class="plus-banner" aria-labelledby="nibble-plus">
+          <div class="plus-copy">
+            <p class="eyebrow">Nibble Plus</p>
+            <h2 id="nibble-plus">Unlimited recipes</h2>
+            <p>
+              Make meals from what you have, whenever you need. Weekly or monthly
+              auto-renewing plans. Prices and renewal terms appear before purchase.
+            </p>
+            <a class="button button-light" href="support.html">Subscription help</a>
+          </div>
+          <img
+            src="assets/chicken-fajitas.webp"
+            alt="Chicken fajitas with peppers, avocado, cilantro, and lime"
+            width="1080"
+            height="1440"
+            loading="lazy"
+          />
         </section>
       </main>
 
       <footer class="site-footer">
-        <span>© 2026 Nibble</span>
+        <a class="footer-brand" href="./" aria-label="Nibble home">
+          <img class="brand-mark" src="assets/icon.png" alt="" width="36" height="36" />
+          <span>Nibble</span>
+        </a>
+        <span class="footer-note">Turn what you have into dinner.</span>
         <span class="footer-links">
+          <a href="recipes/">Recipes</a>
           <a href="privacy.html">Privacy</a>
           <a href="support.html">Support</a>
           <a href="mailto:getnibble@outlook.com">Email</a>
         </span>
+        <span class="copyright">© 2026 Nibble</span>
       </footer>
     </div>
+    <script src="assets/vendor/gsap-3.15.0.min.js" defer></script>
+    <script src="assets/vendor/ScrollTrigger-3.15.0.min.js" defer></script>
+    <script src="motion.js" defer></script>
   </body>
 </html>

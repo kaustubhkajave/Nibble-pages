@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  <url>
+    <loc>https://cookwithnibble.com/</loc>
+  </url>
+  <url>
+    <loc>https://cookwithnibble.com/recipes/</loc>
+  </url>
+  <url>
+    <loc>https://cookwithnibble.com/recipes/chickpea-coconut-milk-curry-with-basmati-rice/</loc>
+    <image:image>
+      <image:loc>https://cookwithnibble.com/assets/recipes/chickpea-coconut-milk-curry-with-basmati-rice.jpg</image:loc>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://cookwithnibble.com/support.html</loc>
+  </url>
+  <url>
+    <loc>https://cookwithnibble.com/privacy.html</loc>
+  </url>
+</urlset>

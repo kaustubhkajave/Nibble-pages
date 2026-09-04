@@ -3,13 +3,35 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="color-scheme" content="light dark" />
-    <meta name="theme-color" content="#fbf6ef" />
+    <meta name="color-scheme" content="light" />
+    <meta name="theme-color" content="#fdfdfc" />
     <title>Privacy Policy — Nibble</title>
     <meta
       name="description"
       content="How Nibble handles ingredient photos, recipe requests, subscriptions, support messages, and locally stored data."
     />
+    <link rel="canonical" href="https://cookwithnibble.com/privacy.html" />
+    <meta property="og:url" content="https://cookwithnibble.com/privacy.html" />
+    <meta property="og:site_name" content="Nibble" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Privacy Policy — Nibble" />
+    <meta
+      property="og:description"
+      content="How Nibble handles app data, AI requests, subscriptions, and support."
+    />
+    <meta property="og:image" content="https://cookwithnibble.com/assets/og.jpg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="628" />
+    <meta property="og:image:alt" content="Nibble — Turn what you have into dinner." />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Privacy Policy — Nibble" />
+    <meta
+      name="twitter:description"
+      content="How Nibble handles app data, AI requests, subscriptions, and support."
+    />
+    <meta name="twitter:image" content="https://cookwithnibble.com/assets/og.jpg" />
+    <meta name="twitter:image:alt" content="Nibble — Turn what you have into dinner." />
+    <link rel="icon" href="assets/icon.png" type="image/png" />
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
@@ -17,22 +39,40 @@
 
     <div class="site-shell">
       <header class="site-header">
-        <a class="brand" href="index.html" aria-label="Nibble home">
-          <span class="brand-mark" aria-hidden="true">N</span>
+        <a class="brand" href="./" aria-label="Nibble home">
+          <img class="brand-mark" src="assets/icon.png" alt="" width="40" height="40" />
           <span>Nibble</span>
         </a>
         <nav aria-label="Primary navigation">
-          <a href="index.html">Home</a>
-          <a href="privacy.html" aria-current="page">Privacy</a>
+          <a href="./">Home</a>
+          <a href="recipes/">Recipes</a>
+          <a class="nav-privacy" href="privacy.html" aria-current="page">Privacy</a>
           <a href="support.html">Support</a>
         </nav>
       </header>
 
-      <main id="main-content" class="prose-main">
-        <header class="page-header">
-          <h1>Privacy Policy</h1>
-          <p class="updated">Last updated August 21, 2026</p>
+      <main id="main-content" class="document-main">
+        <header class="page-hero">
+          <div>
+            <p class="eyebrow">Privacy</p>
+            <h1>Privacy Policy</h1>
+            <p class="updated">Last updated August 21, 2026</p>
+          </div>
         </header>
+
+        <div class="document-layout">
+          <aside class="document-nav" aria-label="Privacy policy sections">
+            <span>On this page</span>
+            <a href="#on-device">On your device</a>
+            <a href="#processing">What is processed</a>
+            <a href="#ai-processing">AI processing</a>
+            <a href="#providers">Service providers</a>
+            <a href="#retention">Retention</a>
+            <a href="#rights">Your rights</a>
+            <a href="#contact">Contact</a>
+          </aside>
+
+          <article class="document-content">
 
         <div class="summary-card">
           <strong>The short version</strong>
@@ -44,7 +84,7 @@
           </p>
         </div>
 
-        <section>
+        <section id="on-device">
           <h2>What stays on your device</h2>
           <p>
             Saved recipes, their optional public source links, folders, recent cooking history, preferences,
@@ -59,7 +99,7 @@
           </p>
         </section>
 
-        <section>
+        <section id="processing">
           <h2>What is processed when you use Nibble</h2>
           <div class="table-scroll" tabindex="0" role="region" aria-label="Data processing details">
             <table>
@@ -72,25 +112,25 @@
               </thead>
               <tbody>
                 <tr>
-                  <td>Ingredient photo</td>
-                  <td>Identify food and pantry items in the selected image.</td>
-                  <td>
+                  <td data-label="Information">Ingredient photo</td>
+                  <td data-label="Purpose">Identify food and pantry items in the selected image.</td>
+                  <td data-label="Handling">
                     Sent to Nibble's API and Google Gemini. Nibble does not save
                     the image to its database.
                   </td>
                 </tr>
                 <tr>
-                  <td>Confirmed ingredients, preferences, and dish names</td>
-                  <td>Create the recipes you request.</td>
-                  <td>
+                  <td data-label="Information">Confirmed ingredients, preferences, and dish names</td>
+                  <td data-label="Purpose">Create the recipes you request.</td>
+                  <td data-label="Handling">
                     Sent to Nibble's API and an AI provider, currently OpenAI.
                     Nibble does not save this content to its database.
                   </td>
                 </tr>
                 <tr>
-                  <td>Recipe text and recipe website links</td>
-                  <td>Import a recipe from written ingredients and directions.</td>
-                  <td>
+                  <td data-label="Information">Recipe text and recipe website links</td>
+                  <td data-label="Purpose">Import a recipe from written ingredients and directions.</td>
+                  <td data-label="Handling">
                     Processed transiently by Nibble's API and the relevant
                     provider. Original recipe text and webpage contents are not saved. If you save the
                     recipe, its structured content and optional public source
@@ -98,37 +138,37 @@
                   </td>
                 </tr>
                 <tr>
-                  <td>Anonymous installation identifier</td>
-                  <td>
+                  <td data-label="Information">Anonymous installation identifier</td>
+                  <td data-label="Purpose">
                     Apply free usage, verify subscriptions, limit abuse, and
                     locate requests when you provide a Support ID.
                   </td>
-                  <td>
+                  <td data-label="Handling">
                     Sent to Nibble's API and RevenueCat. Nibble stores a keyed
                     hash rather than the original identifier in server records.
                   </td>
                 </tr>
                 <tr>
-                  <td>Connection and request metadata</td>
-                  <td>Secure, operate, and troubleshoot the service.</td>
-                  <td>
+                  <td data-label="Information">Connection and request metadata</td>
+                  <td data-label="Purpose">Secure, operate, and troubleshoot the service.</td>
+                  <td data-label="Handling">
                     Includes items such as app version, platform, endpoint,
                     request ID, status, timing, model usage, and a hashed IP
                     address. Recipe content is excluded from Nibble's logs.
                   </td>
                 </tr>
                 <tr>
-                  <td>Subscription information</td>
-                  <td>Confirm whether Nibble Plus is active.</td>
-                  <td>
+                  <td data-label="Information">Subscription information</td>
+                  <td data-label="Purpose">Confirm whether Nibble Plus is active.</td>
+                  <td data-label="Handling">
                     Apple handles payment details. RevenueCat provides product,
                     entitlement, and renewal status to Nibble.
                   </td>
                 </tr>
                 <tr>
-                  <td>Support communications</td>
-                  <td>Respond when you contact us.</td>
-                  <td>
+                  <td data-label="Information">Support communications</td>
+                  <td data-label="Purpose">Respond when you contact us.</td>
+                  <td data-label="Handling">
                     Your email address, message, and any Support ID you choose to
                     include are retained in our support mailbox as needed to
                     resolve the request.
@@ -139,7 +179,7 @@
           </div>
         </section>
 
-        <section>
+        <section id="ai-processing">
           <h2>AI processing and retention</h2>
           <p>
             Nibble's API keeps request content in memory only long enough to
@@ -158,7 +198,7 @@
           </p>
         </section>
 
-        <section>
+        <section id="providers">
           <h2>Service providers</h2>
           <ul class="provider-list">
             <li>
@@ -194,7 +234,7 @@
           </p>
         </section>
 
-        <section>
+        <section id="retention">
           <h2>Retention and deletion</h2>
           <p>
             Operational logs and hashed server records are retained only while
@@ -215,7 +255,7 @@
           </p>
         </section>
 
-        <section>
+        <section id="rights">
           <h2>Your choices and rights</h2>
           <p>
             Depending on where you live, you may have rights to access, correct,
@@ -225,7 +265,7 @@
           </p>
         </section>
 
-        <section>
+        <section id="website-privacy">
           <h2>Website privacy</h2>
           <p>
             These Nibble information pages do not use analytics, advertising
@@ -234,7 +274,7 @@
           </p>
         </section>
 
-        <section>
+        <section id="children">
           <h2>Children</h2>
           <p>
             Nibble is not directed to children under 13, and we do not knowingly
@@ -242,7 +282,7 @@
           </p>
         </section>
 
-        <section>
+        <section id="changes">
           <h2>Changes to this policy</h2>
           <p>
             We may update this policy when Nibble's features, providers, or legal
@@ -251,22 +291,33 @@
           </p>
         </section>
 
-        <section>
+        <section id="contact">
           <h2>Contact</h2>
           <address>
             <a href="mailto:getnibble@outlook.com">getnibble@outlook.com</a>
           </address>
         </section>
+          </article>
+        </div>
       </main>
 
       <footer class="site-footer">
-        <span>© 2026 Nibble</span>
+        <a class="footer-brand" href="./" aria-label="Nibble home">
+          <img class="brand-mark" src="assets/icon.png" alt="" width="36" height="36" />
+          <span>Nibble</span>
+        </a>
+        <span class="footer-note">Turn what you have into dinner.</span>
         <span class="footer-links">
-          <a href="index.html">Home</a>
+          <a href="./">Home</a>
+          <a href="recipes/">Recipes</a>
           <a href="support.html">Support</a>
           <a href="mailto:getnibble@outlook.com">Email</a>
         </span>
+        <span class="copyright">© 2026 Nibble</span>
       </footer>
     </div>
+    <script src="assets/vendor/gsap-3.15.0.min.js" defer></script>
+    <script src="assets/vendor/ScrollTrigger-3.15.0.min.js" defer></script>
+    <script src="motion.js" defer></script>
   </body>
 </html>
