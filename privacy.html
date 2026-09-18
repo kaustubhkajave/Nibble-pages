@@ -8,7 +8,7 @@
     <title>Privacy Policy — Nibble</title>
     <meta
       name="description"
-      content="How Nibble handles ingredient photos, recipe requests, subscriptions, support messages, and locally stored data."
+      content="How Nibble handles ingredient photos, recipe and Chef Mode requests, generated visuals, purchases, support messages, and locally stored data."
     />
     <link rel="canonical" href="https://cookwithnibble.com/privacy" />
     <meta property="og:url" content="https://cookwithnibble.com/privacy" />
@@ -17,7 +17,7 @@
     <meta property="og:title" content="Privacy Policy — Nibble" />
     <meta
       property="og:description"
-      content="How Nibble handles app data, AI requests, subscriptions, and support."
+      content="How Nibble handles app data, AI recipe and image requests, purchases, and support."
     />
     <meta property="og:image" content="https://cookwithnibble.com/assets/og.jpg" />
     <meta property="og:image:width" content="1200" />
@@ -27,7 +27,7 @@
     <meta name="twitter:title" content="Privacy Policy — Nibble" />
     <meta
       name="twitter:description"
-      content="How Nibble handles app data, AI requests, subscriptions, and support."
+      content="How Nibble handles app data, AI recipe and image requests, purchases, and support."
     />
     <meta name="twitter:image" content="https://cookwithnibble.com/assets/og.jpg" />
     <meta name="twitter:image:alt" content="Nibble — Turn what you have into dinner." />
@@ -56,7 +56,7 @@
           <div>
             <p class="eyebrow">Privacy</p>
             <h1>Privacy Policy</h1>
-            <p class="updated">Last updated August 21, 2026</p>
+            <p class="updated">Last updated September 18, 2026</p>
           </div>
         </header>
 
@@ -87,11 +87,12 @@
         <section id="on-device">
           <h2>What stays on your device</h2>
           <p>
-            Saved recipes, their optional public source links, folders, recent cooking history, preferences,
-            onboarding status, and an anonymous installation identifier are
-            stored locally. Nibble does not provide in-app cloud syncing.
-            Deleting the app removes this data from that device; any device
-            backups are controlled by Apple and your iOS settings.
+            Saved recipes, generated Chef visuals, folders, favorites, recent
+            and completed cooking history, preferences, onboarding status, and
+            an anonymous installation identifier are stored locally. Nibble
+            does not provide in-app recipe or image cloud syncing. Deleting the
+            app removes this local data from that device; any device backups are
+            controlled by Apple and your iOS settings.
           </p>
           <p>
             A selected ingredient photo remains temporary app data and is not
@@ -120,28 +121,28 @@
                   </td>
                 </tr>
                 <tr>
-                  <td data-label="Information">Confirmed ingredients, preferences, and dish names</td>
-                  <td data-label="Purpose">Create the recipes you request.</td>
+                  <td data-label="Information">Confirmed ingredients and dinner preferences</td>
+                  <td data-label="Purpose">Create the everyday or Chef Mode recipes you request.</td>
                   <td data-label="Handling">
                     Sent to Nibble's API and an AI provider, currently OpenAI.
-                    Nibble does not save this content to its database.
+                    Nibble excludes this content from operational logs.
                   </td>
                 </tr>
                 <tr>
-                  <td data-label="Information">Recipe text and recipe website links</td>
-                  <td data-label="Purpose">Import a recipe from written ingredients and directions.</td>
+                  <td data-label="Information">Chef Mode recipe and plating details</td>
+                  <td data-label="Purpose">Create an optional final-dish visual for that recipe.</td>
                   <td data-label="Handling">
-                    Processed transiently by Nibble's API and the relevant
-                    provider. Original recipe text and webpage contents are not saved. If you save the
-                    recipe, its structured content and optional public source
-                    link stay on your device.
+                    Sent through Nibble's API to Google Gemini. The generated
+                    image is returned to the app and stored locally on your
+                    device. It is not placed in Nibble's operational logs.
                   </td>
                 </tr>
                 <tr>
                   <td data-label="Information">Anonymous installation identifier</td>
                   <td data-label="Purpose">
-                    Apply free usage, verify subscriptions, limit abuse, and
-                    locate requests when you provide a Support ID.
+                    Apply recipe and image allowances, verify purchases and
+                    subscriptions, limit abuse, and locate requests when you
+                    provide a Support ID.
                   </td>
                   <td data-label="Handling">
                     Sent to Nibble's API and RevenueCat. Nibble stores a keyed
@@ -158,11 +159,13 @@
                   </td>
                 </tr>
                 <tr>
-                  <td data-label="Information">Subscription information</td>
-                  <td data-label="Purpose">Confirm whether Nibble Plus is active.</td>
+                  <td data-label="Information">Purchase and subscription information</td>
+                  <td data-label="Purpose">Confirm Nibble Plus and add purchased Chef image credits.</td>
                   <td data-label="Handling">
                     Apple handles payment details. RevenueCat provides product,
-                    entitlement, and renewal status to Nibble.
+                    transaction, entitlement, and renewal information to Nibble.
+                    Nibble stores the credit balance and transaction records
+                    needed to prevent the same purchase being granted twice.
                   </td>
                 </tr>
                 <tr>
@@ -182,10 +185,11 @@
         <section id="ai-processing">
           <h2>AI processing and retention</h2>
           <p>
-            Nibble's API keeps request content in memory only long enough to
-            complete the request. It does not place ingredient photos,
-            ingredient names, dietary text, dish names, recipe text, recipe webpage contents, or generated recipes in
-            its operational logs or database.
+            Nibble does not place ingredient photos, ingredient names, dietary
+            text, generated recipes, Chef prompts, or generated images in its
+            operational logs. A completed generation result may be retained
+            briefly under its request ID for retry recovery and to prevent a
+            duplicate charge. These recovery records are marked to expire.
           </p>
           <p>
             AI providers may temporarily retain inputs and outputs for security,
@@ -202,24 +206,21 @@
           <h2>Service providers</h2>
           <ul class="provider-list">
             <li>
-              <strong>Google Gemini</strong> processes ingredient photos.
+              <strong>Google Gemini</strong> processes ingredient photos and
+              the recipe details needed to create optional Chef visuals.
             </li>
             <li>
-              <strong>OpenAI</strong> processes confirmed ingredients,
-              preferences, dish names, and pasted recipe text for recipe generation.
-            </li>
-            <li>
-              <strong>Recipe websites</strong> receive a standard request from
-              Nibble's server when you import one of their public pages. They
-              may process that request under their own privacy policies.
+              <strong>OpenAI</strong> processes confirmed ingredients and
+              dinner preferences for everyday and Chef Mode recipe generation.
             </li>
             <li>
               <strong>Google Cloud</strong> hosts Nibble's API and server-side
               operational records.
             </li>
             <li>
-              <strong>RevenueCat</strong> manages subscription entitlement
-              status using the anonymous installation identifier.
+              <strong>RevenueCat</strong> manages subscription entitlement and
+              consumable purchase information using the anonymous installation
+              identifier.
             </li>
             <li>
               <strong>Apple</strong> processes App Store payments and purchase
@@ -239,9 +240,11 @@
           <p>
             Operational logs and hashed server records are retained only while
             reasonably needed to operate the service, enforce usage and
-            subscriptions, prevent abuse, resolve support issues, and meet legal
-            obligations. Support emails are retained as needed to handle the
-            conversation and related records.
+            purchases, prevent abuse, resolve support issues, and meet legal
+            obligations. Temporary request-recovery records expire through a
+            database retention policy; physical deletion may occur later than
+            the logical expiry. Support emails are retained as needed to handle
+            the conversation and related records.
           </p>
           <p>
             Delete the app to erase Nibble's local data from your device. You

@@ -152,6 +152,12 @@
       stagger: 0.055,
     });
     revealEach(".suggestion-board", { y: 18 });
+    revealGroup(
+      ".chef-mode-copy",
+      ".eyebrow, h2, p:not(.eyebrow), .chef-mode-steps li",
+      { y: 14, stagger: 0.055 },
+    );
+    revealEach(".chef-mode-preview", { y: 18 });
     revealGroup(".principle-grid", "article", { y: 14, stagger: 0.07 });
     revealGroup(".plus-copy", ".eyebrow, h2, p:not(.eyebrow), .button", {
       y: 14,

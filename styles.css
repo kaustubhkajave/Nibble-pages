@@ -782,6 +782,152 @@ p {
   color: var(--sage);
 }
 
+.chef-mode-section {
+  display: grid;
+  grid-template-columns: minmax(0, 0.9fr) minmax(22rem, 0.72fr);
+  gap: clamp(3rem, 8vw, 7rem);
+  align-items: center;
+  margin: clamp(2rem, 5vw, 4rem) 0;
+  padding: clamp(2.5rem, 7vw, 5.5rem);
+  border-radius: 2rem;
+  background: #1f1915;
+  color: #fffaf5;
+}
+
+.chef-mode-copy .eyebrow {
+  color: #f08a65;
+}
+
+.chef-mode-copy h2 {
+  color: #fffaf5;
+}
+
+.chef-mode-copy > p:not(.eyebrow) {
+  max-width: 39rem;
+  margin-top: 1.35rem;
+  color: rgba(255, 250, 245, 0.68);
+}
+
+.chef-mode-steps {
+  display: grid;
+  gap: 0;
+  margin: 2rem 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.chef-mode-steps li {
+  display: grid;
+  grid-template-columns: 2.1rem minmax(0, 1fr);
+  gap: 0.8rem;
+  padding: 1rem 0;
+  border-top: 1px solid rgba(255, 250, 245, 0.14);
+}
+
+.chef-mode-steps li > span {
+  padding-top: 0.15rem;
+  color: #f08a65;
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+}
+
+.chef-mode-steps strong {
+  display: block;
+  color: #fffaf5;
+  font-size: 0.94rem;
+}
+
+.chef-mode-steps p {
+  margin-top: 0.28rem;
+  color: rgba(255, 250, 245, 0.62);
+  font-size: 0.84rem;
+}
+
+.chef-mode-preview {
+  position: relative;
+  display: grid;
+  min-height: 34rem;
+  place-items: center end;
+}
+
+.chef-reference-card {
+  position: relative;
+  width: min(88%, 21rem);
+  overflow: hidden;
+  margin: 0;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 1.6rem;
+  background: #2a231e;
+  box-shadow: 0 24px 64px rgba(0, 0, 0, 0.3);
+}
+
+.chef-reference-card img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 3 / 4;
+  object-fit: cover;
+}
+
+.chef-reference-card figcaption {
+  position: absolute;
+  right: 0.75rem;
+  bottom: 0.75rem;
+  left: 0.75rem;
+  padding: 0.65rem 0.8rem;
+  border-radius: 0.8rem;
+  background: rgba(31, 25, 21, 0.78);
+  color: rgba(255, 250, 245, 0.82);
+  font-size: 0.7rem;
+  font-weight: 600;
+  backdrop-filter: blur(12px);
+}
+
+.chef-phase-card {
+  position: absolute;
+  z-index: 2;
+  display: grid;
+  width: min(15.5rem, 70%);
+  gap: 0.15rem;
+  padding: 0.9rem 1rem;
+  border: 1px solid rgba(33, 32, 28, 0.08);
+  border-radius: 1rem;
+  background: rgba(255, 253, 250, 0.94);
+  box-shadow: 0 14px 36px rgba(0, 0, 0, 0.2);
+  color: var(--label);
+  backdrop-filter: blur(14px);
+}
+
+.chef-phase-card span {
+  color: var(--accent);
+  font-size: 0.62rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.chef-phase-card strong {
+  font-family: var(--display-font);
+  font-size: 1.08rem;
+  font-weight: 400;
+  line-height: 1.15;
+}
+
+.chef-phase-card small {
+  color: var(--secondary-label);
+  font-size: 0.7rem;
+}
+
+.chef-phase-cooking {
+  top: 1.5rem;
+  left: -1rem;
+}
+
+.chef-phase-plating {
+  bottom: 1.5rem;
+  left: -2rem;
+}
+
 .principles {
   padding-top: clamp(4.5rem, 9vw, 7rem);
 }
@@ -1742,6 +1888,19 @@ details[open] summary::after {
     max-width: 40rem;
   }
 
+  .chef-mode-section {
+    grid-template-columns: 1fr;
+  }
+
+  .chef-mode-copy {
+    max-width: 44rem;
+  }
+
+  .chef-mode-preview {
+    width: min(100%, 30rem);
+    justify-self: center;
+  }
+
   .recipes-hero {
     grid-template-columns: 1fr;
     gap: 2.5rem;
@@ -1989,6 +2148,11 @@ details[open] summary::after {
     justify-self: center;
   }
 
+  .chef-mode-section {
+    margin-block: 1.5rem;
+    padding: clamp(2rem, 8vw, 3rem) clamp(1.25rem, 6vw, 2.5rem);
+  }
+
   .contact-card {
     align-items: flex-start;
     flex-direction: column;
@@ -2130,6 +2294,25 @@ details[open] summary::after {
 
   .hero-stage {
     min-height: 0;
+  }
+
+  .chef-mode-preview {
+    min-height: 30rem;
+  }
+
+  .chef-reference-card {
+    width: 82%;
+  }
+
+  .chef-phase-cooking {
+    top: 1rem;
+    left: 0;
+  }
+
+  .chef-phase-plating {
+    right: 0;
+    bottom: 1rem;
+    left: auto;
   }
 
   .ingredient-photo {
