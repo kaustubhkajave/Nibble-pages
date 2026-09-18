@@ -1,0 +1,12 @@
+# Use permanent redirects for every non-canonical file and slash variant.
+/index.html / 301
+/support.html /support 301
+/support/ /support 301
+/privacy.html /privacy 301
+/privacy/ /privacy 301
+/recipes /recipes/ 301
+/recipes/index.html /recipes/ 301
+/recipes/ground-turkey-white-bean-soup /recipes/ground-turkey-white-bean-soup/ 301
+/recipes/ground-turkey-white-bean-soup/index.html /recipes/ground-turkey-white-bean-soup/ 301
+/recipes/chickpea-coconut-milk-curry-with-basmati-rice /recipes/chickpea-coconut-milk-curry-with-basmati-rice/ 301
+/recipes/chickpea-coconut-milk-curry-with-basmati-rice/index.html /recipes/chickpea-coconut-milk-curry-with-basmati-rice/ 301
