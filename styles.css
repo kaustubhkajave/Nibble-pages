@@ -1461,6 +1461,131 @@ p {
   white-space: nowrap;
 }
 
+/* Photo-led plating recipes */
+.page-recipe-plating .recipe-page-copy h1 {
+  max-width: 16ch;
+  font-size: clamp(2.7rem, 5.5vw, 5rem);
+}
+
+.recipe-plating,
+.plating-card,
+.recipe-advice {
+  scroll-margin-top: 2rem;
+}
+
+.plating-gallery {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: clamp(2rem, 5vw, 4rem);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.plating-photo {
+  display: block;
+  border-radius: 1.5rem;
+}
+
+.plating-photo img {
+  width: 100%;
+  height: auto;
+  border-radius: 1.5rem;
+}
+
+.plating-card-copy {
+  padding-top: 1.35rem;
+}
+
+.plating-card-copy h3,
+.recipe-advice h3 {
+  margin: 0.4rem 0 0.7rem;
+  font-family: var(--display-font);
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  font-weight: 400;
+  line-height: 1.15;
+}
+
+.plating-card-copy p,
+.recipe-advice p {
+  max-width: 42rem;
+  color: var(--secondary-label);
+}
+
+.plating-card-copy .plating-tip {
+  margin-top: 1rem;
+  padding-left: 1rem;
+  border-left: 2px solid var(--accent);
+  font-size: 0.9rem;
+}
+
+.plating-card:last-child {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: inherit;
+  align-items: center;
+}
+
+.recipe-advice {
+  margin-block: clamp(3rem, 7vw, 5rem);
+}
+
+.recipe-advice-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 2rem;
+}
+
+.recipe-questions details {
+  padding: 1.1rem 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.recipe-questions summary {
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.recipe-questions details p {
+  margin-top: 0.8rem;
+}
+
+.recipe-cta-actions,
+.recipe-related {
+  display: grid;
+  gap: 1rem;
+  justify-items: start;
+}
+
+.recipe-related {
+  margin-top: 3rem;
+}
+
+.recipe-related h2 {
+  font-size: clamp(1.7rem, 4vw, 2.4rem);
+}
+
+.chef-guide-link {
+  display: inline-block;
+  margin-top: 1.5rem;
+  padding-block: 0.5rem;
+  color: #f1a184;
+  font-weight: 600;
+}
+
+@media (max-width: 720px) {
+  .plating-gallery,
+  .plating-card:last-child,
+  .recipe-advice-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .plating-card:last-child {
+    display: block;
+  }
+}
+
 /* Privacy */
 .document-main,
 .support-main {

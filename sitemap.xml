@@ -3,11 +3,18 @@
         xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://cookwithnibble.com/</loc>
-    <lastmod>2026-09-18</lastmod>
+    <lastmod>2026-09-20</lastmod>
   </url>
   <url>
     <loc>https://cookwithnibble.com/recipes/</loc>
-    <lastmod>2026-09-18</lastmod>
+    <lastmod>2026-09-20</lastmod>
+  </url>
+  <url>
+    <loc>https://cookwithnibble.com/recipes/crispy-gnocchi-tomato-spinach/</loc>
+    <lastmod>2026-09-20</lastmod>
+    <image:image>
+      <image:loc>https://cookwithnibble.com/assets/recipes/crispy-gnocchi-tomato-spinach/plating-step-5-1080.webp</image:loc>
+    </image:image>
   </url>
   <url>
     <loc>https://cookwithnibble.com/recipes/chickpea-coconut-milk-curry-with-basmati-rice/</loc>
