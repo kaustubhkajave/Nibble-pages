@@ -4,6 +4,11 @@
   const gsap = window.gsap;
   const ScrollTrigger = window.ScrollTrigger;
 
+  // Keep reading and cooking content immediately visible, especially on phones.
+  if (document.querySelector(".recipe-detail-main")) {
+    return;
+  }
+
   // Motion is progressive enhancement: if the CDN is unavailable, the site stays fully visible.
   if (!gsap || !ScrollTrigger) {
     return;
@@ -61,7 +66,7 @@
     });
   }
 
-  media.add("(prefers-reduced-motion: no-preference)", function () {
+  media.add("(min-width: 901px) and (prefers-reduced-motion: no-preference)", function () {
     const intro = gsap.timeline({ defaults: { ease: ease } });
     const homeHero = document.querySelector(".hero");
     const isWideLayout = window.matchMedia("(min-width: 901px)").matches;
@@ -94,7 +99,7 @@
         .from(
           ".hero-stage",
           {
-            x: isWideLayout ? 18 : 0,
+            x: 0,
             y: isWideLayout ? 8 : 14,
             scale: 0.985,
             opacity: 0,
@@ -170,7 +175,6 @@
 
     revealEach(".summary-card, .support-contact", { y: 14 });
     revealEach(".support-faq .faq-section", { y: 14 });
-    revealGroup(".recipe-principles", "li", { y: 10, stagger: 0.06 });
     revealEach(".recipe-catalog", { y: 14 });
     revealGroup(".recipe-facts", ".recipe-fact", { y: 10, stagger: 0.05 });
     revealEach(".recipe-ingredients", { y: 14 });
