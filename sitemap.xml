@@ -6,31 +6,6 @@
     <lastmod>2026-09-20</lastmod>
   </url>
   <url>
-    <loc>https://cookwithnibble.com/recipes/</loc>
-    <lastmod>2026-09-20</lastmod>
-  </url>
-  <url>
-    <loc>https://cookwithnibble.com/recipes/crispy-gnocchi-tomato-spinach/</loc>
-    <lastmod>2026-09-20</lastmod>
-    <image:image>
-      <image:loc>https://cookwithnibble.com/assets/recipes/crispy-gnocchi-tomato-spinach/plating-step-5-1080.webp</image:loc>
-    </image:image>
-  </url>
-  <url>
-    <loc>https://cookwithnibble.com/recipes/chickpea-coconut-milk-curry-with-basmati-rice/</loc>
-    <lastmod>2026-09-04</lastmod>
-    <image:image>
-      <image:loc>https://cookwithnibble.com/assets/recipes/chickpea-coconut-milk-curry-with-basmati-rice.jpg</image:loc>
-    </image:image>
-  </url>
-  <url>
-    <loc>https://cookwithnibble.com/recipes/ground-turkey-white-bean-soup/</loc>
-    <lastmod>2026-09-04</lastmod>
-    <image:image>
-      <image:loc>https://cookwithnibble.com/assets/recipes/ground-turkey-white-bean-soup.jpg</image:loc>
-    </image:image>
-  </url>
-  <url>
     <loc>https://cookwithnibble.com/support</loc>
     <lastmod>2026-09-18</lastmod>
   </url>
@@ -38,4 +13,15 @@
     <loc>https://cookwithnibble.com/privacy</loc>
     <lastmod>2026-09-18</lastmod>
   </url>
+  <url><loc>https://cookwithnibble.com/recipes/</loc></url>
+  <url><loc>https://cookwithnibble.com/recipes/ground-turkey-white-bean-soup/</loc></url>
+  <url><loc>https://cookwithnibble.com/recipes/chickpea-coconut-milk-curry-with-basmati-rice/</loc></url>
+  <url><loc>https://cookwithnibble.com/recipes/chicken-fajitas/</loc></url>
+  <url><loc>https://cookwithnibble.com/recipes/garlic-beef-noodles/</loc></url>
+  <url><loc>https://cookwithnibble.com/recipes/lime-fish-tacos/</loc></url>
+  <url><loc>https://cookwithnibble.com/recipes/sausage-spinach-pasta/</loc></url>
+  <url><loc>https://cookwithnibble.com/recipes/tomato-white-bean-stew/</loc></url>
+  <url><loc>https://cookwithnibble.com/recipes/pork-chops-apple/</loc></url>
+  <url><loc>https://cookwithnibble.com/recipes/teriyaki-chicken/</loc></url>
+  <url><loc>https://cookwithnibble.com/recipes/steak-sweet-potato/</loc></url>
 </urlset>
