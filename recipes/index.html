@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="color-scheme" content="light">
-<meta name="theme-color" content="#fdfdfc">
+<meta name="theme-color" content="#fbf6ef">
 <meta name="robots" content="index,follow,max-image-preview:large">
 <title>Recipes | Nibble</title>
 <meta name="description" content="Quick everyday dinners and Chef Mode dishes, with clear cooking steps and plating inspiration.">
@@ -17,7 +17,11 @@
 <meta property="og:image" content="https://cookwithnibble.com/assets/og.jpg">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" href="/assets/icon.png">
+<link rel="preload" href="/assets/fonts/manrope-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/fonts/bricolage-grotesque-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="/styles.css">
+<script>document.documentElement.classList.add("has-nav-toggle")</script>
+<script src="/nav.js" defer></script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"ItemList","numberOfItems":19,"itemListElement":[{"@type":"ListItem","position":1,"name":"Turkey & Bean Soup","url":"https://cookwithnibble.com/recipes/ground-turkey-white-bean-soup/"},{"@type":"ListItem","position":2,"name":"Coconut Chickpea Curry","url":"https://cookwithnibble.com/recipes/chickpea-coconut-milk-curry-with-basmati-rice/"},{"@type":"ListItem","position":3,"name":"Chicken Fajitas","url":"https://cookwithnibble.com/recipes/chicken-fajitas/"},{"@type":"ListItem","position":4,"name":"Garlic Beef Noodles","url":"https://cookwithnibble.com/recipes/garlic-beef-noodles/"},{"@type":"ListItem","position":5,"name":"Lime Fish Tacos","url":"https://cookwithnibble.com/recipes/lime-fish-tacos/"},{"@type":"ListItem","position":6,"name":"Sausage & Spinach Pasta","url":"https://cookwithnibble.com/recipes/sausage-spinach-pasta/"},{"@type":"ListItem","position":7,"name":"Tomato & Bean Stew","url":"https://cookwithnibble.com/recipes/tomato-white-bean-stew/"},{"@type":"ListItem","position":8,"name":"Pork Chops & Apple","url":"https://cookwithnibble.com/recipes/pork-chops-apple/"},{"@type":"ListItem","position":9,"name":"Teriyaki Chicken","url":"https://cookwithnibble.com/recipes/teriyaki-chicken/"},{"@type":"ListItem","position":10,"name":"Steak & Sweet Potato","url":"https://cookwithnibble.com/recipes/steak-sweet-potato/"},{"@type":"ListItem","position":11,"name":"Crispy Salmon & Lemon Butter","url":"https://cookwithnibble.com/recipes/crispy-salmon-lemon-butter/"},{"@type":"ListItem","position":12,"name":"Cauliflower Steak & Beetroot","url":"https://cookwithnibble.com/recipes/cauliflower-steak-beetroot/"},{"@type":"ListItem","position":13,"name":"Halloumi & Minted Peas","url":"https://cookwithnibble.com/recipes/halloumi-minted-peas/"},{"@type":"ListItem","position":14,"name":"Chicken & Spinach Purée","url":"https://cookwithnibble.com/recipes/chicken-spinach-puree/"},{"@type":"ListItem","position":15,"name":"Chicken, Corn & Red Pepper","url":"https://cookwithnibble.com/recipes/chicken-corn-red-pepper/"},{"@type":"ListItem","position":16,"name":"Pork & Yellow Pepper Sauce","url":"https://cookwithnibble.com/recipes/pork-yellow-pepper/"},{"@type":"ListItem","position":17,"name":"Pork, Red Cabbage & Apple","url":"https://cookwithnibble.com/recipes/pork-red-cabbage-apple/"},{"@type":"ListItem","position":18,"name":"Sea Bass & Saffron Risotto","url":"https://cookwithnibble.com/recipes/sea-bass-saffron-risotto/"},{"@type":"ListItem","position":19,"name":"Shrimp, Polenta & Red Pepper","url":"https://cookwithnibble.com/recipes/shrimp-polenta-red-pepper/"}]}</script>
 </head>
 <body class="page-recipes">
@@ -28,11 +32,13 @@
 <img class="brand-mark" src="/assets/icon.png" alt="" width="40" height="40">
 <span>Nibble</span>
 </a>
-<nav aria-label="Primary navigation">
+<button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Open menu"><span class="nav-toggle-bars" aria-hidden="true"></span></button>
+<nav id="site-nav" aria-label="Primary navigation">
 <a href="/">Home</a>
 <a href="/recipes/" aria-current="location">Recipes</a>
 <a class="nav-privacy" href="/privacy">Privacy</a>
 <a href="/support">Support</a>
+<a class="nav-cta" href="https://apps.apple.com/app/id6797456027">Get the app <span aria-hidden="true">↗</span></a>
 </nav>
 </header>
 <main id="main-content" class="recipes-main">

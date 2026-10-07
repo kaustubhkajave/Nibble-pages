@@ -4,7 +4,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="color-scheme" content="light" />
-    <meta name="theme-color" content="#fdfdfc" />
+    <meta name="theme-color" content="#fbf6ef" />
     <title>Support — Nibble</title>
     <meta
       name="description"
@@ -32,7 +32,11 @@
     <meta name="twitter:image" content="https://cookwithnibble.com/assets/og.jpg" />
     <meta name="twitter:image:alt" content="Nibble — Turn what you have into dinner." />
     <link rel="icon" href="assets/icon.png" type="image/png" />
+    <link rel="preload" href="assets/fonts/manrope-latin.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="assets/fonts/bricolage-grotesque-latin.woff2" as="font" type="font/woff2" crossorigin />
     <link rel="stylesheet" href="styles.css" />
+    <script>document.documentElement.classList.add("has-nav-toggle")</script>
+    <script src="nav.js" defer></script>
   </head>
   <body>
     <a class="skip-link" href="#main-content">Skip to content</a>
@@ -43,11 +47,13 @@
           <img class="brand-mark" src="assets/icon.png" alt="" width="40" height="40" />
           <span>Nibble</span>
         </a>
-        <nav aria-label="Primary navigation">
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Open menu"><span class="nav-toggle-bars" aria-hidden="true"></span></button>
+        <nav id="site-nav" aria-label="Primary navigation">
           <a href="./">Home</a>
           <a href="recipes/">Recipes</a>
           <a class="nav-privacy" href="privacy">Privacy</a>
           <a href="support" aria-current="page">Support</a>
+          <a class="nav-cta" href="https://apps.apple.com/app/id6797456027">Get the app <span aria-hidden="true">↗</span></a>
         </nav>
       </header>
 

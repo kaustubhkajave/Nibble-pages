@@ -4,7 +4,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="color-scheme" content="light" />
-    <meta name="theme-color" content="#fdfdfc" />
+    <meta name="theme-color" content="#fbf6ef" />
     <meta name="robots" content="index,follow,max-image-preview:large" />
     <title>Nibble — Recipes from Your Ingredients</title>
     <meta
@@ -33,7 +33,12 @@
     <meta name="twitter:image" content="https://cookwithnibble.com/assets/og.jpg" />
     <meta name="twitter:image:alt" content="Nibble turns ingredients into practical recipes." />
     <link rel="icon" href="assets/icon.png" type="image/png" />
+    <link rel="apple-touch-icon" href="assets/icon.png" />
+    <link rel="preload" href="assets/fonts/manrope-latin.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="assets/fonts/bricolage-grotesque-latin.woff2" as="font" type="font/woff2" crossorigin />
     <link rel="stylesheet" href="styles.css" />
+    <script>document.documentElement.classList.add("has-nav-toggle")</script>
+    <script src="nav.js" defer></script>
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
@@ -69,11 +74,13 @@
           <img class="brand-mark" src="assets/icon.png" alt="" width="40" height="40" />
           <span>Nibble</span>
         </a>
-        <nav aria-label="Primary navigation">
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Open menu"><span class="nav-toggle-bars" aria-hidden="true"></span></button>
+        <nav id="site-nav" aria-label="Primary navigation">
           <a href="./" aria-current="page">Home</a>
           <a href="recipes/">Recipes</a>
           <a class="nav-privacy" href="privacy">Privacy</a>
           <a href="support">Support</a>
+          <a class="nav-cta" href="https://apps.apple.com/app/id6797456027">Get the app <span aria-hidden="true">↗</span></a>
         </nav>
       </header>
 
@@ -87,15 +94,14 @@
               with elevated techniques, guided plating, and an optional dish visual.
             </p>
             <div class="hero-actions">
-              <a class="button" href="#how-it-works">
-                See how Nibble works
+              <a class="button button-ink" href="https://apps.apple.com/app/id6797456027">
+                Download on the App Store
+                <span aria-hidden="true">↗</span>
+              </a>
+              <a class="platform-pill" href="#how-it-works">
+                See how it works
                 <span aria-hidden="true">↓</span>
               </a>
-              <a
-                class="platform-pill"
-                href="https://apps.apple.com/app/id6797456027"
-                aria-label="Get Nibble on the App Store"
-              >Made for iPhone</a>
             </div>
             <ul class="trust-list" aria-label="Nibble highlights">
               <li>No account</li>
@@ -246,6 +252,88 @@
           </div>
         </section>
 
+        <section class="section recipe-showcase" aria-labelledby="showcase-title">
+          <header class="section-heading">
+            <p class="eyebrow">Made with Nibble</p>
+            <h2 id="showcase-title">Something good for tonight.</h2>
+            <a class="section-link" href="recipes/">Browse all 19 recipes <span aria-hidden="true">→</span></a>
+          </header>
+          <div class="recipe-grid">
+            <article class="recipe-card">
+              <a class="recipe-card-link" href="recipes/lime-fish-tacos/">
+                <span class="recipe-card-image">
+                  <img src="assets/catalog/lime-fish-tacos-r1-26ce98fb693a.webp" alt="Lime fish tacos" width="1080" height="1440" loading="lazy" decoding="async" />
+                </span>
+                <span class="recipe-card-copy">
+                  <span class="recipe-card-meta">Everyday · 25 min</span>
+                  <span class="recipe-card-title">Lime Fish Tacos</span>
+                  <span class="recipe-card-action">View recipe <span aria-hidden="true">↗</span></span>
+                </span>
+              </a>
+            </article>
+            <article class="recipe-card">
+              <a class="recipe-card-link" href="recipes/garlic-beef-noodles/">
+                <span class="recipe-card-image">
+                  <img src="assets/catalog/garlic-beef-noodles-r1-1d8a5f9b4c17.webp" alt="Garlic beef noodles" width="1080" height="1440" loading="lazy" decoding="async" />
+                </span>
+                <span class="recipe-card-copy">
+                  <span class="recipe-card-meta">Everyday · 20 min</span>
+                  <span class="recipe-card-title">Garlic Beef Noodles</span>
+                  <span class="recipe-card-action">View recipe <span aria-hidden="true">↗</span></span>
+                </span>
+              </a>
+            </article>
+            <article class="recipe-card">
+              <a class="recipe-card-link" href="recipes/chickpea-coconut-milk-curry-with-basmati-rice/">
+                <span class="recipe-card-image">
+                  <img src="assets/catalog/chickpea-coconut-milk-curry-with-basmati-rice-r1-0135f7028ad3.webp" alt="Coconut chickpea curry with basmati rice" width="1080" height="1440" loading="lazy" decoding="async" />
+                </span>
+                <span class="recipe-card-copy">
+                  <span class="recipe-card-meta">Everyday · 30 min</span>
+                  <span class="recipe-card-title">Coconut Chickpea Curry</span>
+                  <span class="recipe-card-action">View recipe <span aria-hidden="true">↗</span></span>
+                </span>
+              </a>
+            </article>
+            <article class="recipe-card">
+              <a class="recipe-card-link" href="recipes/crispy-salmon-lemon-butter/">
+                <span class="recipe-card-image">
+                  <img src="assets/catalog/crispy-salmon-lemon-butter-step-5-r1-b230d1e0f733.webp" alt="Plated crispy salmon with lemon butter" width="1080" height="1440" loading="lazy" decoding="async" />
+                </span>
+                <span class="recipe-card-copy">
+                  <span class="recipe-card-meta">Chef Mode · 35 min</span>
+                  <span class="recipe-card-title">Crispy Salmon &amp; Lemon Butter</span>
+                  <span class="recipe-card-action">View recipe <span aria-hidden="true">↗</span></span>
+                </span>
+              </a>
+            </article>
+            <article class="recipe-card">
+              <a class="recipe-card-link" href="recipes/sea-bass-saffron-risotto/">
+                <span class="recipe-card-image">
+                  <img src="assets/catalog/sea-bass-saffron-risotto-step-5-r1-fd4a1db25553.webp" alt="Plated sea bass over saffron risotto" width="1080" height="1440" loading="lazy" decoding="async" />
+                </span>
+                <span class="recipe-card-copy">
+                  <span class="recipe-card-meta">Chef Mode · 40 min</span>
+                  <span class="recipe-card-title">Sea Bass &amp; Saffron Risotto</span>
+                  <span class="recipe-card-action">View recipe <span aria-hidden="true">↗</span></span>
+                </span>
+              </a>
+            </article>
+            <article class="recipe-card">
+              <a class="recipe-card-link" href="recipes/halloumi-minted-peas/">
+                <span class="recipe-card-image">
+                  <img src="assets/catalog/halloumi-minted-peas-step-5-r1-254f7f25e859.webp" alt="Plated halloumi with minted peas" width="1080" height="1440" loading="lazy" decoding="async" />
+                </span>
+                <span class="recipe-card-copy">
+                  <span class="recipe-card-meta">Chef Mode · 25 min</span>
+                  <span class="recipe-card-title">Halloumi &amp; Minted Peas</span>
+                  <span class="recipe-card-action">View recipe <span aria-hidden="true">↗</span></span>
+                </span>
+              </a>
+            </article>
+          </div>
+        </section>
+
         <section id="chef-mode" class="section chef-mode-section" aria-labelledby="chef-mode-title">
           <div class="chef-mode-copy">
             <p class="eyebrow">Chef Mode · Plate It</p>
@@ -330,6 +418,66 @@
           </div>
         </section>
 
+        <section class="section home-faq" aria-labelledby="faq-title">
+          <header class="section-heading section-heading-compact">
+            <p class="eyebrow">Good to know</p>
+            <h2 id="faq-title">Questions, answered.</h2>
+            <a class="section-link" href="support">More help in Support <span aria-hidden="true">→</span></a>
+          </header>
+          <div class="faq-list">
+            <details>
+              <summary>What does Nibble do?</summary>
+              <div class="answer">
+                <p>
+                  Nibble turns the ingredients you already have into recipes. Photograph
+                  your fridge, pantry, or counter—or type the list—confirm what Nibble found,
+                  then choose servings, time, effort, and cleanup.
+                </p>
+              </div>
+            </details>
+            <details>
+              <summary>Do I need an account?</summary>
+              <div class="answer">
+                <p>
+                  No. Open Nibble and start cooking. Saved recipes and preferences stay on
+                  your device. The <a href="privacy">privacy policy</a> explains what the
+                  service processes.
+                </p>
+              </div>
+            </details>
+            <details>
+              <summary>Is Nibble free?</summary>
+              <div class="answer">
+                <p>
+                  A new installation includes three free recipe credits. Each generated meal
+                  uses one; photo analysis, saved recipes, and cooking do not. Nibble Plus
+                  adds unlimited recipe generation.
+                </p>
+              </div>
+            </details>
+            <details>
+              <summary>What is Chef Mode?</summary>
+              <div class="answer">
+                <p>
+                  Chef Mode creates a more elevated version of a dish from the same
+                  ingredients, with dedicated cooking and plating steps. Choose
+                  <strong>Chef It Up</strong> before generating, or elevate an everyday
+                  recipe later.
+                </p>
+              </div>
+            </details>
+            <details>
+              <summary>What if the photo misses something?</summary>
+              <div class="answer">
+                <p>
+                  Add, rename, or remove ingredients on the review screen before generating.
+                  Only the list you confirm is used.
+                </p>
+              </div>
+            </details>
+          </div>
+        </section>
+
         <section class="plus-banner" aria-labelledby="nibble-plus">
           <div class="plus-copy">
             <p class="eyebrow">Nibble Plus</p>
@@ -339,7 +487,13 @@
               includes 20. Need more? One-time image packs add non-expiring credits.
               Prices and renewal terms appear before purchase.
             </p>
-            <a class="button button-light" href="support">Subscription help</a>
+            <div class="plus-actions">
+              <a class="button button-ink" href="https://apps.apple.com/app/id6797456027">
+                Download on the App Store
+                <span aria-hidden="true">↗</span>
+              </a>
+              <a class="button button-quiet button-light" href="support">Subscription help</a>
+            </div>
           </div>
           <img
             src="assets/chicken-fajitas.webp"

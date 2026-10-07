@@ -157,6 +157,8 @@
       stagger: 0.055,
     });
     revealEach(".suggestion-board", { y: 18 });
+    revealGroup(".recipe-showcase .recipe-grid", ".recipe-card", { y: 18, stagger: 0.06 });
+    revealGroup(".home-faq", ".section-heading-compact > *, details", { y: 12, stagger: 0.05 });
     revealGroup(
       ".chef-mode-copy",
       ".eyebrow, h2, p:not(.eyebrow), .chef-mode-steps li",
