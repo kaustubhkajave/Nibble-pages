@@ -4,6 +4,8 @@
 /support/ /support 301
 /privacy.html /privacy 301
 /privacy/ /privacy 301
+/cook-what-you-have /cook-what-you-have/ 301
+/cook-what-you-have/index.html /cook-what-you-have/ 301
 /recipes /recipes/ 301
 /recipes/index.html /recipes/ 301
 # Withdrawn recipes: send old links and search results to a live page.

@@ -2323,6 +2323,242 @@ details[open] summary::after {
   font-size: 0.76rem;
 }
 
+/* Cook what you have */
+.phone-shot {
+  display: block;
+  width: 100%;
+  height: auto;
+  border: 1px solid var(--border-strong);
+  border-radius: 1.9rem;
+  background: var(--paper);
+  box-shadow: var(--shadow-large);
+}
+
+.cwyh-hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(20rem, 0.72fr);
+  gap: clamp(2.5rem, 6vw, 6rem);
+  align-items: center;
+  padding: clamp(3rem, 7vw, 6rem) 0 clamp(3.5rem, 7vw, 6rem);
+}
+
+.cwyh-hero h1 {
+  max-width: 15ch;
+}
+
+.cwyh-hero-stage {
+  position: relative;
+  min-height: 34rem;
+}
+
+.cwyh-hero-stage::before {
+  position: absolute;
+  inset: 8% -4% 4% 8%;
+  border-radius: 2.5rem;
+  background: var(--brand-wash);
+  content: "";
+}
+
+.cwyh-hero-stage .phone-shot {
+  position: absolute;
+}
+
+.cwyh-hero-back {
+  top: 0;
+  right: 0;
+  width: min(62%, 16rem);
+  transform: rotate(4deg);
+}
+
+.cwyh-hero-front {
+  bottom: 0;
+  left: 0;
+  width: min(66%, 17.5rem);
+  transform: rotate(-3deg);
+}
+
+.flow-steps {
+  display: grid;
+  gap: clamp(4.5rem, 10vw, 8rem);
+  margin: 0;
+  padding: clamp(2rem, 5vw, 4rem) 0 clamp(5rem, 10vw, 8rem);
+  list-style: none;
+  scroll-margin-top: var(--header-height);
+}
+
+.flow-step {
+  display: grid;
+  grid-template-columns: minmax(0, 0.9fr) minmax(0, 1fr);
+  gap: clamp(2.5rem, 7vw, 6rem);
+  align-items: center;
+}
+
+.flow-step:nth-child(even) .flow-media {
+  order: 2;
+}
+
+.flow-step-wide {
+  grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr);
+}
+
+.flow-media {
+  display: flex;
+  justify-content: center;
+  gap: clamp(0.75rem, 2vw, 1.4rem);
+  margin: 0;
+  padding: clamp(1.5rem, 4vw, 3rem);
+  border-radius: 2.25rem;
+  background: var(--section);
+}
+
+.flow-media .phone-shot {
+  width: min(100%, 18.75rem);
+}
+
+.flow-media-pair .phone-shot {
+  width: min(48%, 14.5rem);
+}
+
+.flow-media-trio .phone-shot {
+  width: min(32%, 14.5rem);
+}
+
+.flow-media-pair .phone-shot:last-child,
+.flow-media-trio .phone-shot:nth-child(2) {
+  margin-top: 2.5rem;
+}
+
+.flow-copy {
+  max-width: 34rem;
+}
+
+.flow-step .step-number {
+  display: inline-grid;
+  min-width: 2.6rem;
+  height: 2.6rem;
+  place-items: center;
+  margin-bottom: 1.2rem;
+  padding: 0 0.7rem;
+  border-radius: 999px;
+  background: var(--accent-soft);
+  color: var(--accent);
+  font-size: 0.82rem;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+}
+
+.flow-copy h2 {
+  font-size: clamp(2rem, 3.6vw, 3rem);
+}
+
+.flow-copy > p {
+  margin-top: 1.2rem;
+  color: var(--secondary-label);
+  font-size: 1.06rem;
+  line-height: 1.65;
+}
+
+.flow-copy > p strong {
+  color: var(--label);
+}
+
+.flow-copy > p.flow-note {
+  font-size: 0.88rem;
+}
+
+.flow-copy .check-list {
+  margin-top: 1.6rem;
+}
+
+.flow-copy .section-link {
+  margin-top: 1.2rem;
+  white-space: normal;
+}
+
+.pref-list {
+  display: grid;
+  margin: 1.5rem 0 0;
+  border-top: 1px solid var(--border);
+}
+
+.pref-list > div {
+  display: grid;
+  grid-template-columns: 9.5rem minmax(0, 1fr);
+  gap: 1rem;
+  padding: 0.8rem 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.pref-list dt {
+  padding-top: 0.15rem;
+  color: var(--tertiary-label);
+  font-size: 0.74rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.pref-list dd {
+  margin: 0;
+  color: var(--label);
+  font-size: 0.98rem;
+  font-weight: 600;
+  line-height: 1.5;
+}
+
+@media (max-width: 900px) {
+  .cwyh-hero,
+  .flow-step,
+  .flow-step-wide {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .cwyh-hero-stage {
+    width: min(100%, 30rem);
+    min-height: 30rem;
+    justify-self: center;
+  }
+
+  .flow-step:nth-child(even) .flow-media {
+    order: 0;
+  }
+}
+
+@media (max-width: 720px) {
+  .cwyh-hero-stage {
+    min-height: 24rem;
+  }
+
+  .flow-media {
+    padding: 1.25rem;
+    border-radius: 1.6rem;
+  }
+
+  .flow-media .phone-shot {
+    width: min(70%, 17rem);
+    border-radius: 1.2rem;
+  }
+
+  .flow-media-pair .phone-shot {
+    width: 46%;
+  }
+
+  .flow-media-trio .phone-shot {
+    width: 31%;
+    border-radius: 0.9rem;
+  }
+
+  .flow-media-pair .phone-shot:last-child,
+  .flow-media-trio .phone-shot:nth-child(2) {
+    margin-top: 1.5rem;
+  }
+
+  .pref-list > div {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 0.25rem;
+  }
+}
+
 @media (hover: hover) and (pointer: fine) {
   .site-header nav a:hover {
     background: var(--surface-muted);
