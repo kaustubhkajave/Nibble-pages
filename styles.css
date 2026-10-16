@@ -3615,6 +3615,50 @@ details[open] summary::after {
   font-weight: 650;
 }
 
+/* Phones already have the button, so the QR code only shows on desktop. */
+.download-qr {
+  display: none;
+}
+
+@media (hover: hover) and (pointer: fine) and (min-width: 900px) {
+  .download-qr {
+    display: flex;
+    gap: 1.1rem;
+    align-items: center;
+    max-width: 22rem;
+    margin-top: 2rem;
+    padding: 0.9rem 1.2rem 0.9rem 0.9rem;
+    border: 1px solid var(--border);
+    border-radius: 1.25rem;
+    background: var(--paper);
+    box-shadow: var(--shadow-small);
+    text-align: left;
+  }
+
+  .download-qr img {
+    width: 7.25rem;
+    height: 7.25rem;
+    flex: 0 0 auto;
+    padding: 0.5rem;
+    border-radius: 0.75rem;
+    background: #fff;
+  }
+
+  .download-qr p {
+    margin: 0;
+    color: var(--secondary-label);
+    font-size: 0.9rem;
+    line-height: 1.5;
+  }
+
+  .download-qr strong {
+    display: block;
+    color: var(--label);
+    font-family: var(--display-font);
+    font-size: 1.05rem;
+  }
+}
+
 .download-gallery {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
