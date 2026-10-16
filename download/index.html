@@ -47,7 +47,7 @@
           Snap your ingredients and get a recipe you can make tonight. Want to impress?
           Chef It Up for restaurant-style plating, step by step.
         </p>
-        <a class="button button-ink download-cta" href="https://apps.apple.com/app/id6797456027">
+        <a class="button button-ink download-cta" href="https://apps.apple.com/app/apple-store/id6797456027?pt=129073783&amp;ct=download-page&amp;mt=8">
           Download on the App Store
           <span aria-hidden="true">↗</span>
         </a>
@@ -71,7 +71,7 @@
           <li><strong>Check</strong><span>Confirm the ingredients Nibble found.</span></li>
           <li><strong>Cook</strong><span>Follow a recipe with built-in step timers.</span></li>
         </ol>
-        <a class="button button-ink download-cta" href="https://apps.apple.com/app/id6797456027">
+        <a class="button button-ink download-cta" href="https://apps.apple.com/app/apple-store/id6797456027?pt=129073783&amp;ct=download-page&amp;mt=8">
           Get Nibble free
           <span aria-hidden="true">↗</span>
         </a>
@@ -93,5 +93,24 @@
       <span class="copyright">© 2026 Nibble</span>
     </footer>
   </div>
+  <script>
+    // Tags App Store links with a campaign so App Store Connect splits installs by source.
+    // An explicit ?src= or ?utm_source= wins; otherwise the ad click IDs that TikTok and
+    // Meta append identify the platform. Direct visits keep the "download-page" default.
+    (function () {
+      var params = new URLSearchParams(location.search);
+      var source = params.get("src") || params.get("utm_source");
+      if (!source && params.has("ttclid")) source = "tiktok";
+      if (!source && params.has("fbclid")) source = "meta";
+      if (!source) return;
+      source = source.toLowerCase().replace(/[^a-z0-9_-]+/g, "-").slice(0, 40);
+      if (!source) return;
+      document.querySelectorAll(".download-cta").forEach(function (link) {
+        var url = new URL(link.href);
+        url.searchParams.set("ct", source);
+        link.href = url.toString();
+      });
+    })();
+  </script>
 </body>
 </html>
