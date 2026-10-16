@@ -1,0 +1,13 @@
+{
+  "applinks": {
+    "details": [
+      {
+        "appIDs": ["D5X9HVVUV3.com.kaustubhk.dinnerrescue"],
+        "components": [
+          { "/": "/recipes/?*", "comment": "A recipe page opens that recipe in Nibble" },
+          { "/": "/recipes/?*/", "comment": "Same, with the trailing slash the site uses" }
+        ]
+      }
+    ]
+  }
+}
