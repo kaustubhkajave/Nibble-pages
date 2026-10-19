@@ -1,0 +1,2 @@
+# Cloudflare Workers uploads this folder as static assets; keep git history out (pack files exceed the 25 MiB limit).
+.git
