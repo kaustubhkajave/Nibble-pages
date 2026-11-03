@@ -3966,3 +3966,43 @@ details[open] summary::after {
     display: none;
   }
 }
+
+/* Recipe header button; app-banner.js turns it into "Open in Nibble" where it can. */
+.recipe-app-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  min-height: 2.9rem;
+  margin-top: 0.9rem;
+  padding: 0 1.2rem 0 0.45rem;
+  border-radius: 999px;
+  background: var(--ink);
+  box-shadow: 0 10px 22px rgba(43, 33, 27, 0.16);
+  color: var(--on-dark);
+  font-size: 0.92rem;
+  font-weight: 700;
+  text-decoration: none;
+  transition: background-color 160ms ease, transform 160ms var(--ease-out);
+}
+
+.recipe-app-cta img {
+  width: 2rem;
+  height: 2rem;
+  border-radius: 0.55rem;
+}
+
+.recipe-app-cta:active {
+  transform: scale(0.97);
+}
+
+@media (hover: hover) {
+  .recipe-app-cta:hover {
+    background: var(--ink-hover);
+  }
+}
+
+@media print {
+  .recipe-app-cta {
+    display: none;
+  }
+}

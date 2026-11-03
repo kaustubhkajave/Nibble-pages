@@ -8,14 +8,60 @@
   //   opens that recipe) and fall back to the download page if nothing takes over.
   //   Universal Links can't help here: iOS ignores them for same-site links.
   // - Android gets the download page directly. Desktop gets nothing.
+  // Recipe pages also have an inline button (.recipe-app-cta) that follows the same
+  // rules, but shows on every device and can't be dismissed.
   const ua = navigator.userAgent;
   const isIPhone = /iPhone|iPod/.test(ua);
   const isAndroid = /Android/.test(ua);
   const isIPhoneSafari = isIPhone && /Version\/[\d.]+.*Safari\//.test(ua) && !/CriOS|FxiOS|EdgiOS|OPiOS|GSA\//.test(ua);
+  const canTryApp = isIPhone && !isIPhoneSafari;
   const dismissKey = "nibble-app-banner-dismissed";
   const dismissDays = 30;
 
-  if ((!isIPhone && !isAndroid) || isIPhoneSafari || document.body.classList.contains("page-download")) {
+  const slug = location.pathname.match(/^\/recipes\/([a-z0-9]+(?:-[a-z0-9]+)*)\/?$/)?.[1];
+  const appUrl = slug ? "nibble://recipe-link/" + slug : "nibble://";
+
+  function openApp(event, downloadUrl) {
+    event.preventDefault();
+    let left = false;
+    const markLeft = function () {
+      left = true;
+    };
+    const onVisibility = function () {
+      if (document.hidden) left = true;
+    };
+    // An app switch or the browser's "Open in Nibble?" prompt takes focus away.
+    // If none of that happens the app isn't installed, so go to the download page.
+    window.addEventListener("blur", markLeft);
+    window.addEventListener("pagehide", markLeft);
+    document.addEventListener("visibilitychange", onVisibility);
+    window.setTimeout(function () {
+      window.removeEventListener("blur", markLeft);
+      window.removeEventListener("pagehide", markLeft);
+      document.removeEventListener("visibilitychange", onVisibility);
+      if (!left && !document.hidden) location.href = downloadUrl;
+    }, 1600);
+    location.href = appUrl;
+  }
+
+  // The page links the inline button to the download page; this only adjusts it.
+  const cta = document.querySelector(".recipe-app-cta");
+  if (cta) {
+    const label = cta.querySelector(".recipe-app-cta-label");
+    if (canTryApp) {
+      label.textContent = "Open in Nibble";
+      cta.addEventListener("click", function (event) {
+        openApp(event, cta.href);
+      });
+    } else if (!isIPhone) {
+      label.textContent = "Get Nibble for iPhone";
+    }
+  }
+
+  if (!canTryApp && !isAndroid) {
+    return;
+  }
+  if (document.body.classList.contains("page-download")) {
     return;
   }
 
@@ -28,9 +74,7 @@
     // Storage blocked: show the bar, it just won't remember a dismissal.
   }
 
-  const slug = location.pathname.match(/^\/recipes\/([a-z0-9]+(?:-[a-z0-9]+)*)\/?$/)?.[1];
   const downloadUrl = "/download/?src=site-banner" + (isAndroid ? "-android" : "");
-  const appUrl = slug ? "nibble://recipe-link/" + slug : "nibble://";
 
   const banner = document.createElement("aside");
   banner.className = "app-banner";
@@ -55,26 +99,7 @@
 
   if (isIPhone) {
     action.addEventListener("click", function (event) {
-      event.preventDefault();
-      let left = false;
-      const markLeft = function () {
-        left = true;
-      };
-      const onVisibility = function () {
-        if (document.hidden) left = true;
-      };
-      // An app switch or the browser's "Open in Nibble?" prompt takes focus away.
-      // If none of that happens the app isn't installed, so go to the download page.
-      window.addEventListener("blur", markLeft);
-      window.addEventListener("pagehide", markLeft);
-      document.addEventListener("visibilitychange", onVisibility);
-      window.setTimeout(function () {
-        window.removeEventListener("blur", markLeft);
-        window.removeEventListener("pagehide", markLeft);
-        document.removeEventListener("visibilitychange", onVisibility);
-        if (!left && !document.hidden) location.href = downloadUrl;
-      }, 1600);
-      location.href = appUrl;
+      openApp(event, downloadUrl);
     });
   }
 
