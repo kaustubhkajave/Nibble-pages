@@ -3857,3 +3857,112 @@ details[open] summary::after {
     display: block;
   }
 }
+
+/* "Open in Nibble" bar, added by app-banner.js on phones only. */
+.app-banner {
+  position: fixed;
+  right: 0.75rem;
+  bottom: calc(0.75rem + env(safe-area-inset-bottom, 0px));
+  left: 0.75rem;
+  z-index: 60;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  max-width: 32rem;
+  margin: 0 auto;
+  padding: 0.6rem 0.6rem 0.6rem 0.7rem;
+  border: 1px solid var(--border);
+  border-radius: 1.25rem;
+  background: var(--surface-strong);
+  box-shadow: var(--shadow-large);
+  color: var(--label);
+  animation: app-banner-in 420ms var(--ease-out) both;
+}
+
+.has-app-banner body {
+  padding-bottom: calc(5.5rem + env(safe-area-inset-bottom, 0px));
+}
+
+.app-banner-icon {
+  flex: none;
+  width: 2.75rem;
+  height: 2.75rem;
+  border-radius: 0.7rem;
+}
+
+.app-banner-copy {
+  display: grid;
+  flex: 1;
+  min-width: 0;
+  line-height: 1.25;
+}
+
+.app-banner-copy strong {
+  font-family: var(--display-font);
+  font-size: 1rem;
+  font-weight: 800;
+  letter-spacing: -0.01em;
+}
+
+.app-banner-copy strong,
+.app-banner-copy span {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.app-banner-copy span {
+  color: var(--secondary-label);
+  font-size: 0.82rem;
+}
+
+.app-banner-action {
+  display: inline-flex;
+  flex: none;
+  align-items: center;
+  min-height: 2.5rem;
+  padding: 0 1.1rem;
+  border-radius: 999px;
+  background: var(--ink);
+  color: var(--on-dark);
+  font-size: 0.9rem;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.app-banner-action:active {
+  transform: scale(0.97);
+}
+
+.app-banner-close {
+  display: inline-grid;
+  flex: none;
+  place-items: center;
+  width: 2rem;
+  height: 2.5rem;
+  margin-left: -0.35rem;
+  padding: 0;
+  border: 0;
+  background: none;
+  color: var(--tertiary-label);
+  cursor: pointer;
+}
+
+@keyframes app-banner-in {
+  from {
+    opacity: 0;
+    transform: translateY(1.5rem);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .app-banner {
+    animation: none;
+  }
+}
+
+@media print {
+  .app-banner {
+    display: none;
+  }
+}
