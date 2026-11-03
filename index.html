@@ -52,7 +52,9 @@
             "url": "https://cookwithnibble.com/",
             "name": "Nibble",
             "inLanguage": "en",
-            "publisher": { "@id": "https://cookwithnibble.com/#organization" }
+            "publisher": {
+              "@id": "https://cookwithnibble.com/#organization"
+            }
           },
           {
             "@type": "Organization",
@@ -60,8 +62,114 @@
             "name": "Nibble",
             "url": "https://cookwithnibble.com/",
             "logo": "https://cookwithnibble.com/assets/icon.png",
+            "email": "getnibble@outlook.com",
+            "founder": {
+              "@type": "Person",
+              "name": "Kaustubh Kajave"
+            },
+            "contactPoint": {
+              "@type": "ContactPoint",
+              "contactType": "customer support",
+              "email": "getnibble@outlook.com",
+              "url": "https://cookwithnibble.com/support"
+            },
             "sameAs": [
               "https://apps.apple.com/app/id6797456027"
+            ]
+          },
+          {
+            "@type": "MobileApplication",
+            "@id": "https://cookwithnibble.com/#app",
+            "name": "Nibble: Recipes & Plating",
+            "alternateName": "Nibble",
+            "description": "Nibble is an iPhone app that turns a photo of your fridge, pantry, or counter into recipes that use the ingredients you have, with an optional Chef Mode for elevated techniques and step-by-step plating.",
+            "url": "https://cookwithnibble.com/",
+            "downloadUrl": "https://apps.apple.com/app/id6797456027",
+            "installUrl": "https://apps.apple.com/app/id6797456027",
+            "image": "https://cookwithnibble.com/assets/icon.png",
+            "operatingSystem": "iOS 16.4 or later",
+            "applicationCategory": "LifestyleApplication",
+            "applicationSubCategory": "Food & Drink",
+            "featureList": [
+              "Photograph your fridge, pantry, or counter, or type your ingredients",
+              "Review and edit every detected ingredient before cooking",
+              "Choose servings, time, effort, and cleanup",
+              "Get one to three recipes built around what you have",
+              "Chef Mode for elevated techniques and step-by-step plating",
+              "Optional AI-generated final-dish image",
+              "No account needed; saved recipes stay on your device"
+            ],
+            "offers": {
+              "@type": "Offer",
+              "price": "0",
+              "priceCurrency": "USD",
+              "description": "Free to download with three free recipe credits. Nibble Plus is an optional weekly or monthly subscription."
+            },
+            "publisher": {
+              "@id": "https://cookwithnibble.com/#organization"
+            }
+          },
+          {
+            "@type": "FAQPage",
+            "@id": "https://cookwithnibble.com/#faq",
+            "url": "https://cookwithnibble.com/",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "What app turns a photo of my fridge into recipes?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Nibble. It is an iPhone app that reads a photo of your fridge, pantry, or counter, lists the ingredients it finds for you to confirm, and then writes up to three recipes that use what you have."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "What does Nibble do?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Nibble turns the ingredients you already have into recipes. Photograph your fridge, pantry, or counter—or type the list—confirm what Nibble found, then choose servings, time, effort, and cleanup."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Do I need an account?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "No. Open Nibble and start cooking. Saved recipes and preferences stay on your device. The privacy policy explains what the service processes."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Is Nibble free?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Nibble is free to download. A new installation includes three free recipe credits. Each generated meal uses one; photo analysis, saved recipes, and cooking do not. Nibble Plus, a weekly or monthly subscription, adds unlimited recipe generation. The recipes on this site are free to read."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Is Nibble on Android?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "No. Nibble is an iPhone app, available on the App Store, and needs iOS 16.4 or later."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "What is Chef Mode?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Chef Mode creates a more elevated version of a dish from the same ingredients, with dedicated cooking and plating steps. Choose Chef It Up before generating, or elevate an everyday recipe later."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "What if the photo misses something?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Add, rename, or remove ingredients on the review screen before generating. Only the list you confirm is used."
+                }
+              }
             ]
           }
         ]
@@ -262,7 +370,7 @@
           <header class="section-heading">
             <p class="eyebrow">Made with Nibble</p>
             <h2 id="showcase-title">Something good for tonight.</h2>
-            <a class="section-link" href="recipes/">Browse all 19 recipes <span aria-hidden="true">→</span></a>
+            <a class="section-link" href="recipes/">Browse all recipes <span aria-hidden="true">→</span></a>
           </header>
           <div class="recipe-grid">
             <article class="recipe-card">
@@ -430,6 +538,16 @@
           </header>
           <div class="faq-list">
             <details>
+              <summary>What app turns a photo of my fridge into recipes?</summary>
+              <div class="answer">
+                <p>
+                  Nibble. It is an iPhone app that reads a photo of your fridge, pantry, or
+                  counter, lists the ingredients it finds for you to confirm, and then
+                  writes up to three recipes that use what you have.
+                </p>
+              </div>
+            </details>
+            <details>
               <summary>What does Nibble do?</summary>
               <div class="answer">
                 <p>
@@ -453,9 +571,19 @@
               <summary>Is Nibble free?</summary>
               <div class="answer">
                 <p>
-                  A new installation includes three free recipe credits. Each generated meal
-                  uses one; photo analysis, saved recipes, and cooking do not. Nibble Plus
-                  adds unlimited recipe generation.
+                  Nibble is free to download. A new installation includes three free recipe
+                  credits. Each generated meal uses one; photo analysis, saved recipes, and
+                  cooking do not. Nibble Plus, a weekly or monthly subscription, adds
+                  unlimited recipe generation. The recipes on this site are free to read.
+                </p>
+              </div>
+            </details>
+            <details>
+              <summary>Is Nibble on Android?</summary>
+              <div class="answer">
+                <p>
+                  No. Nibble is an iPhone app, available on the App Store, and needs iOS 16.4
+                  or later.
                 </p>
               </div>
             </details>

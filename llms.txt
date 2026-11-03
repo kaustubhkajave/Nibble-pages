@@ -1,0 +1,25 @@
+# Nibble
+
+> Nibble is an iPhone app that turns a photo of your fridge, pantry, or counter into recipes that use the ingredients you already have. Chef Mode turns a dish into an elevated version with step-by-step plating guidance. The App Store name is "Nibble: Recipes & Plating" (https://apps.apple.com/app/id6797456027).
+
+Key facts:
+
+- Platform: iPhone, iOS 16.4 or later, on the App Store. There is no Android version.
+- Price: free to download. A new installation includes three free recipe credits; each generated meal uses one. Nibble Plus is an optional weekly or monthly subscription with unlimited recipe generation, plus Chef images each subscription period (5 weekly, 20 monthly). The recipes on this website are free to read.
+- How it works: take or choose a photo (or type ingredients), review and edit the ingredient list Nibble found, set servings, time, effort and cleanup, then pick from one to three recipes built around what you have. Recipes come in two styles: Everyday, or Chef It Up for elevated technique and plating.
+- Privacy: no account needed. Saved recipes and preferences stay on the device, and the ingredient photo is used for that scan only.
+- Who it's for: home cooks who want to know what to make for dinner from what is already in the kitchen, and cooks who want restaurant-style plating at home.
+- Contact: getnibble@outlook.com
+
+## Pages
+
+- [Home](https://cookwithnibble.com/): What Nibble does, Chef Mode, Nibble Plus, and a short FAQ.
+- [Cook what you have](https://cookwithnibble.com/cook-what-you-have/): Step-by-step walkthrough from a fridge photo to a plated dinner, with app screenshots and FAQ.
+- [Recipes](https://cookwithnibble.com/recipes/): Free recipes made with Nibble, both everyday dinners and Chef Mode dishes with photographed plating steps.
+- [Download](https://cookwithnibble.com/download/): App Store link and QR code for iPhone.
+- [Support](https://cookwithnibble.com/support): Subscriptions, refunds, restoring purchases, Chef image credits, and troubleshooting.
+- [Privacy policy](https://cookwithnibble.com/privacy): What data the app and service process.
+
+## Optional
+
+- [Sitemap](https://cookwithnibble.com/sitemap.xml): Every page, including each recipe.
